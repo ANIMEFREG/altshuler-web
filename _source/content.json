@@ -1,0 +1,223 @@
+{
+  "email": "yaroshenkor339@gmail.com",
+  "rotisserieUrl": "https://animefreg.github.io/rotisserie/",
+  "demoHost": "animefreg.github.io/rotisserie",
+  "officialUrl": "https://www.rotisserie.co.il/",
+  "officialHost": "rotisserie.co.il",
+  "he": {
+    "lang": "he", "dir": "rtl", "path": "", "otherPath": "en/", "otherLabel": "EN", "otherName": "English",
+    "title": "Altshuler — עיצוב ובניית אתרים לעסקים",
+    "description": "עיצוב ובניית אתרים לעסקים מכל הגדלים — מעסק שרק נפתח ועד רשת עם כמה סניפים. אתר מהיר, ברור ומותאם לנייד, עם גישה אישית לכל לקוח.",
+    "studio": "בניית אתרים",
+    "skip": "דלגו לתוכן",
+    "menu": "תפריט", "close": "סגירה",
+    "nav": [["#work", "עבודות"], ["#services", "למה אנחנו"], ["#process", "תהליך"], ["#plans", "מחירים"], ["#faq", "שאלות"]],
+    "navCta": "בואו נדבר",
+    "hero": {
+      "kicker": "עיצוב ובניית אתרים לעסקים",
+      "title": ["אתר שמביא", "<em>לקוחות</em>,", "לא רק נראה טוב."],
+      "lead": "אנחנו בונים אתרים מהירים וברורים לעסקים מכל הגדלים — מעסק שרק נפתח ועד רשת עם כמה סניפים. כל מי שנכנס לאתר מבין מיד מה אתם מציעים ואיך להגיע אליכם.",
+      "cta": "לקבלת הצעה", "cta2": "לעבודות שלנו",
+      "facts": ["עיצוב אישי, בלי תבניות", "נטען תוך שניות", "גישה אישית לכל עסק"]
+    },
+    "band": ["מסעדות", "רשתות", "מספרות", "קוסמטיקאיות", "בעלי מקצוע", "סטודיו כושר", "חנויות", "קליניקות", "בתי קפה"],
+    "work": {
+      "eyebrow": "עבודות",
+      "title": "פרויקט נבחר",
+      "name": "Rotisserie Chicken Club",
+      "type": "רשת עוף בגריל · 6 סניפים",
+      "year": "עיצוב מחדש · 2026",
+      "task": "האתר הקודם נבנה על Wix: נטען לאט, היה עמוס ולא נוח בטלפון. בנינו אותו מחדש מאפס, עם מטרה אחת — שכל מי שנכנס, בכל גיל ומכל מכשיר, יבין תוך שניות מה מוכרים, כמה זה עולה ואיך מזמינים. פחות חיפושים, פחות לקוחות שמוותרים באמצע — יותר הזמנות.",
+      "stats": [["5.4 → 1.1", "שניות טעינה במחשב"], ["20 → 3.3", "שניות עד שהאתר מגיב בנייד, ברשת איטית"], ["100/100", "ציון נגישות בבדיקת Google"]],
+      "tags": ["עיצוב", "פיתוח", "תפריט דיגיטלי", "מותאם לנייד", "נגישות"],
+      "link": "לצפייה בגרסת ההדגמה",
+      "note": "זוהי גרסת הדגמה שבנינו לתיק העבודות, ואינה האתר הרשמי של הרשת. האתר הרשמי:",
+      "altDesktop": "עמוד הבית של אתר רוטיסרי במחשב", "altMenu": "עמוד התפריט של רוטיסרי במחשב",
+      "altMobile": "עמוד הבית של רוטיסרי בטלפון", "altMobileMenu": "התפריט של רוטיסרי בטלפון",
+      "nextTitle": "הפרויקט הבא יכול להיות שלכם.",
+      "nextText": "אין לכם אתר, או שיש אתר שלא באמת עובד בשבילכם? שלחו לנו קישור — נגיד לכם בכנות מה היינו משפרים.",
+      "nextCta": "שלחו לנו את האתר שלכם"
+    },
+    "services": {
+      "eyebrow": "למה אנחנו",
+      "title": "אתר שעובד בשבילכם, לא רק כרטיס ביקור.",
+      "items": [
+        ["layout", "עיצוב אישי", "כל אתר נבנה מאפס סביב העסק שלכם — הצבעים, התמונות והאופי. לא תבנית שנראית כמו עוד מאה אתרים."],
+        ["eye", "ברור לכל אחד", "צעירים ומבוגרים, מהטלפון או מהמחשב — כל מי שנכנס מוצא מיד את מה שחיפש: מחירים, שעות, טלפון או הזמנה."],
+        ["bolt", "מהירות", "האתרים שלנו נטענים תוך שניות. לקוח שמחכה לאתר איטי — עובר למתחרה."],
+        ["search", "נמצאים בגוגל", "כותרות, תיאורים ומבנה נכון, כדי שלקוחות באזור ימצאו אתכם ולא את המתחרים."],
+        ["mail", "פניות ישר אליכם", "טופס יצירת קשר, WhatsApp או התקשרות בלחיצה — הלקוח פונה, אתם חוזרים אליו."],
+        ["user", "יחס אישי", "אתם מדברים ישירות עם מי שבונה את האתר. בלי מוקד ובלי מתווכים — וזמינות גם אחרי שהאתר עלה."]
+      ]
+    },
+    "process": {
+      "eyebrow": "תהליך",
+      "title": "ארבעה צעדים, בלי כאב ראש.",
+      "steps": [
+        ["היכרות", "שיחה שבה אנחנו מבינים מה אתם מצפים לראות באתר, מי הלקוחות שלכם ומה הכי חשוב להם. יוצאים ממנה עם תוכנית והצעת מחיר ברורה."],
+        ["טיוטה ראשונה", "אנחנו בונים גרסה ראשונה ושולחים לכם קישור. רואים אתר אמיתי, לא שרטוט."],
+        ["תיקונים", "אתם אומרים מה לשנות, ואנחנו מתקנים עד שהאתר מרגיש בדיוק שלכם."],
+        ["עולים לאוויר", "מחברים דומיין, בודקים בנייד ובמחשב, ומוסרים לכם אתר מוכן לעבודה."]
+      ],
+      "pay": "התשלום: 50% בתחילת העבודה, 50% כשהאתר מוכן."
+    },
+    "plans": {
+      "eyebrow": "מחירים",
+      "title": "בוחרים חבילה, מתאימים לצרכים.",
+      "lead": "לכל עסק צרכים אחרים, ולכן המחיר הסופי נקבע אחרי שיחה קצרה. המחירים כאן הם נקודת התחלה.",
+      "from": "החל מ־", "currency": "₪", "once": "תשלום חד-פעמי",
+      "popular": "הכי נבחר",
+      "cta": "לבדיקת מחיר",
+      "vipBadge": "פרימיום", "vipPrice": "מחיר אישי", "vipOnce": "נקבע בפגישה אישית, לפי היקף הפרויקט", "vipCta": "לתיאום פגישה",
+      "items": [
+        ["דף נחיתה", "הדרך המהירה להופיע ברשת ולקבל פניות.", "690", ["עד 2 עמודים", "עיצוב אישי", "מותאם לנייד", "כפתורי התקשרות, WhatsApp וניווט", "מפה ושעות פתיחה", "דומיין לשנה הראשונה"], false],
+        ["אתר עסקי", "אתר מלא לעסק שרוצה להיראות מקצועי.", "1,990", ["+כל מה שבדף נחיתה, ובנוסף:", "עד 5 עמודים", "גלריה, תפריט או מחירון", "טופס פניות שמגיע ישר אליכם", "התאמה לחיפוש בגוגל", "עזרה בניסוח הטקסטים"], true],
+        ["אתר פרימיום", "לעסקים שרוצים אתר שאין לאף אחד אחר.", "", ["+כל מה שבאתר עסקי, ובנוסף:", "עיצוב ייחודי עם אנימציות", "מספר עמודים לפי הצורך", "אתר בכמה שפות", "חיבור למערכות הזמנות, תורים או משלוחים", "כתיבת תוכן מלאה", "הקמת פרופיל Google Business", "עדיפות בתמיכה"], false]
+      ],
+      "care": {
+        "title": "תחזוקה חודשית",
+        "text": "אחסון, חידוש דומיין, עדכונים קטנים (מחירים, שעות, תמונות) ותמיכה אם משהו לא עובד. לא חובה — אפשר לבטל בכל רגע.",
+        "price": "99", "per": "לחודש"
+      }
+    },
+    "about": {
+      "eyebrow": "נעים להכיר",
+      "title": "רומן אלטשולר, מייסד הסטודיו.",
+      "text": [
+        "אנחנו מעצבים ובונים אתרים לעסקים מכל הגדלים — מעסק שרק נפתח ועד רשת עם כמה סניפים. לכל עסק אנחנו ניגשים בנפרד: מה הוא עושה, מי הלקוחות שלו, ומה יגרום להם להרים טלפון.",
+        "אתם עובדים ישירות מול מי שבונה את האתר, מהשיחה הראשונה ועד שהאתר באוויר. בלי מתווכים, בלי מונחים מסובכים, ועם מחיר שסוגרים מראש."
+      ]
+    },
+    "faq": {
+      "eyebrow": "שאלות",
+      "title": "שאלות שכולם שואלים.",
+      "items": [
+        ["כמה זמן לוקח לבנות אתר?", "דף נחיתה — בדרך כלל כמה ימים. אתר עסקי — שבוע עד שלושה, תלוי כמה מהר מגיעים הטקסטים והתמונות. אתר פרימיום — לפי היקף הפרויקט, ונקבע מראש בפגישה."],
+        ["של מי הדומיין והאתר?", "שלכם. הדומיין נרשם על שמכם, והשנה הראשונה כלולה במחיר. אחרי התשלום המלא האתר שייך לכם."],
+        ["אין לי תמונות או טקסטים. זה בעיה?", "לא. נעזור לנסח טקסטים ולבחור תמונות. תמונות אמיתיות של העסק תמיד עובדות הכי טוב — נסביר איך לצלם אותן בטלפון."],
+        ["חייבים לקחת תחזוקה חודשית?", "לא. בלי תחזוקה האתר עובר אליכם, את חידוש הדומיין משלמים בעצמכם (כ-60–100 ₪ לשנה), ועל כל שינוי משלמים בנפרד."],
+        ["אפשר לשנות דברים אחרי שהאתר עלה?", "כן. עם תחזוקה חודשית עדכונים קטנים כלולים. בלעדיה — מחיר קבוע לכל שינוי, סוגרים מראש."],
+        ["איך משלמים?", "50% בתחילת העבודה ו-50% כשהאתר מוכן ואתם מרוצים ממנו."]
+      ]
+    },
+    "contact": {
+      "eyebrow": "צרו קשר",
+      "title": "בואו נדבר על האתר שלכם.",
+      "lead": "השאירו פרטים ונחזור אליכם. אפשר גם לכתוב ישירות למייל.",
+      "name": "שם", "business": "שם העסק", "phone": "טלפון", "emailLabel": "מייל (לא חובה)",
+      "plan": "מה מעניין אתכם?", "planOptions": ["עוד לא בטוח/ה", "דף נחיתה", "אתר עסקי", "אתר פרימיום", "רק תחזוקה לאתר קיים"],
+      "message": "ספרו בקצרה על העסק", "messagePh": "למשל: מספרה בחיפה, אין לנו אתר, רוצים שיזמינו תורים",
+      "send": "שליחה", "required": "שדה חובה", "sent": "נפתח חלון מייל עם הפרטים — נשאר רק ללחוץ \"שליחה\".",
+      "subject": "פנייה מהאתר", "or": "או במייל"
+    },
+    "footer": { "rights": "כל הזכויות שמורות", "top": "חזרה למעלה" }
+  },
+  "en": {
+    "lang": "en", "dir": "ltr", "path": "../", "otherPath": "../", "otherLabel": "עב", "otherName": "עברית",
+    "title": "Altshuler — Website design for businesses",
+    "description": "Website design for businesses of every size — from new ventures to multi-branch chains. Fast, clear, mobile-first websites with a personal approach.",
+    "studio": "Web studio",
+    "skip": "Skip to content",
+    "menu": "Menu", "close": "Close",
+    "nav": [["#work", "Work"], ["#services", "Why us"], ["#process", "Process"], ["#plans", "Pricing"], ["#faq", "FAQ"]],
+    "navCta": "Let's talk",
+    "hero": {
+      "kicker": "Website design for businesses",
+      "title": ["A website that brings", "<em>customers</em>,", "not just looks nice."],
+      "lead": "We build fast, clear websites for businesses of every size — from one that's just opening to a chain with several branches. Everyone who visits instantly understands what you offer and how to reach you.",
+      "cta": "Get a quote", "cta2": "See our work",
+      "facts": ["Custom design, no templates", "Loads in seconds", "A personal approach"]
+    },
+    "band": ["Restaurants", "Chains", "Barbershops", "Beauty salons", "Tradespeople", "Fitness studios", "Shops", "Clinics", "Cafés"],
+    "work": {
+      "eyebrow": "Work",
+      "title": "Featured project",
+      "name": "Rotisserie Chicken Club",
+      "type": "Rotisserie chicken chain · 6 branches",
+      "year": "Redesign · 2026",
+      "task": "The old site was built on Wix: slow, cluttered and awkward on a phone. We rebuilt it from scratch with one goal — anyone who visits, of any age and on any device, understands within seconds what's on offer, what it costs and how to order. Less searching, fewer customers giving up halfway — more orders.",
+      "stats": [["5.4 → 1.1", "seconds to load on desktop"], ["20 → 3.3", "seconds until the site responds on a slow mobile network"], ["100/100", "Google accessibility score"]],
+      "tags": ["Design", "Development", "Digital menu", "Mobile-first", "Accessibility"],
+      "link": "View the demo version",
+      "note": "This is a demo version we built for our portfolio, not the chain's official website. The official site:",
+      "altDesktop": "Rotisserie home page on desktop", "altMenu": "Rotisserie menu page on desktop",
+      "altMobile": "Rotisserie home page on a phone", "altMobileMenu": "Rotisserie menu on a phone",
+      "nextTitle": "The next project could be yours.",
+      "nextText": "No website yet — or one that doesn't really work for you? Send us a link and we'll tell you honestly what we'd improve.",
+      "nextCta": "Send us your site"
+    },
+    "services": {
+      "eyebrow": "Why us",
+      "title": "A website that works for you, not just a business card.",
+      "items": [
+        ["layout", "Custom design", "Every site is built from scratch around your business — your colors, photos and character. Not a template that looks like a hundred others."],
+        ["eye", "Clear to everyone", "Young or old, on a phone or a computer — every visitor instantly finds what they came for: prices, hours, phone or ordering."],
+        ["bolt", "Speed", "Our sites load in seconds. A customer waiting on a slow site goes to a competitor."],
+        ["search", "Found on Google", "Proper titles, descriptions and structure, so local customers find you — not your competitors."],
+        ["mail", "Leads straight to you", "A contact form, WhatsApp or one-tap calling — the customer reaches out, you call back."],
+        ["user", "Personal attention", "You talk directly to the person building your site. No call center, no middlemen — and we're still there after launch."]
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "Four steps, no headache.",
+      "steps": [
+        ["Getting to know you", "A conversation where we learn what you expect to see on your site, who your customers are and what matters most to them. You leave with a plan and a clear quote."],
+        ["First draft", "We build a first version and send you a link. You see a real website, not a sketch."],
+        ["Revisions", "You tell us what to change, and we refine it until the site feels exactly like yours."],
+        ["Go live", "We connect the domain, test on phone and desktop, and hand you a site that's ready to work."]
+      ],
+      "pay": "Payment: 50% to start, 50% when the site is ready."
+    },
+    "plans": {
+      "eyebrow": "Pricing",
+      "title": "Pick a plan, tailor it to your needs.",
+      "lead": "Every business needs something different, so the final price is set after a short conversation. The prices here are a starting point.",
+      "from": "From ", "currency": "₪", "once": "one-time payment",
+      "popular": "Most popular",
+      "cta": "Check the price",
+      "vipBadge": "Premium", "vipPrice": "Custom price", "vipOnce": "Set in a personal meeting, based on the project scope", "vipCta": "Book a meeting",
+      "items": [
+        ["Landing page", "The fastest way to get online and start getting leads.", "690", ["Up to 2 pages", "Custom design", "Mobile-friendly", "Call, WhatsApp and directions buttons", "Map and opening hours", "Domain for the first year"], false],
+        ["Business site", "A full website for a business that wants to look professional.", "1,990", ["+Everything in Landing page, plus:", "Up to 5 pages", "Gallery, menu or price list", "Contact form that comes straight to you", "Set up for Google search", "Help writing the copy"], true],
+        ["Premium site", "For businesses that want a site nobody else has.", "", ["+Everything in Business site, plus:", "Unique design with animations", "As many pages as you need", "Multilingual site", "Booking, appointment or delivery integrations", "Full copywriting", "Google Business profile setup", "Priority support"], false]
+      ],
+      "care": {
+        "title": "Monthly care",
+        "text": "Hosting, domain renewal, small updates (prices, hours, photos) and support if something breaks. Optional — cancel any time.",
+        "price": "99", "per": "/ month"
+      }
+    },
+    "about": {
+      "eyebrow": "Hi there",
+      "title": "Roman Altshuler, founder.",
+      "text": [
+        "We design and build websites for businesses of every size — from one that's just opening to a chain with several branches. We approach each business individually: what it does, who its customers are, and what will make them pick up the phone.",
+        "You work directly with the person building your site, from the first conversation until the site is live. No middlemen, no jargon, and a price agreed up front."
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions everyone asks.",
+      "items": [
+        ["How long does it take?", "A landing page usually takes a few days. A business site takes one to three weeks, depending on how fast the text and photos arrive. A premium site depends on the scope and is agreed up front."],
+        ["Who owns the domain and the site?", "You do. The domain is registered in your name and the first year is included. Once fully paid, the site is yours."],
+        ["I don't have photos or text. Is that a problem?", "No. We'll help write the copy and choose photos. Real photos of your business always work best — we'll explain how to take them on your phone."],
+        ["Do I have to take monthly care?", "No. Without it the site is handed over to you, you renew the domain yourself (about ₪60–100 a year), and each change is paid separately."],
+        ["Can I change things after launch?", "Yes. With monthly care, small updates are included. Without it, each change has a fixed price agreed in advance."],
+        ["How do I pay?", "50% when we start and 50% when the site is ready and you're happy with it."]
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your website.",
+      "lead": "Leave your details and we'll get back to you. Or email us directly.",
+      "name": "Name", "business": "Business name", "phone": "Phone", "emailLabel": "Email (optional)",
+      "plan": "What are you interested in?", "planOptions": ["Not sure yet", "Landing page", "Business site", "Premium site", "Just care for an existing site"],
+      "message": "Tell us briefly about your business", "messagePh": "e.g. a barbershop in Haifa, no website yet, want online bookings",
+      "send": "Send", "required": "Required", "sent": "An email window opened with your details — just press \"Send\".",
+      "subject": "Website enquiry", "or": "or by email"
+    },
+    "footer": { "rights": "All rights reserved", "top": "Back to top" }
+  }
+}

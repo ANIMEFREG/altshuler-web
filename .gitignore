@@ -1,0 +1,8 @@
+# не публикуем: копии, рабочие заметки, сырые скриншоты
+*.bak
+*.bak*
+README.md
+start.bat
+_source/shots/
+_source/gfonts.css
+.playwright-mcp/
