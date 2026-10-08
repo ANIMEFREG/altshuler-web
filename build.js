@@ -57,6 +57,7 @@ function page(L) {
 <title>${esc(L.title)}</title>
 <meta name="description" content="${esc(L.description)}">
 <meta name="theme-color" content="#F4F1EA">
+<meta name="google-site-verification" content="6T6on3ABnXPG_Xr47UX2pxeP_9kdInPiHM5eI0HlFHE">
 <meta property="og:title" content="${esc(L.title)}">
 <meta property="og:description" content="${esc(L.description)}">
 <meta property="og:image" content="${SITE}img/roti-desktop-1440.webp">
