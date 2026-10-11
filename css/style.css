@@ -296,3 +296,70 @@ html[dir=rtl] .form input[dir=ltr] { text-align: right; }
 .plan li.plan__plus { font-weight: 700; padding-bottom: 2px; }
 .form { position: relative; }
 .form .hp { position: absolute; inset-inline-start: 0; top: 0; width: 1px !important; height: 1px; min-height: 0; padding: 0; border: 0; opacity: 0; overflow: hidden; clip-path: inset(50%); pointer-events: none; }
+
+/* ================= v2 «строже»: сетка, линии, моноширинные метки (11.10.2026) ================= */
+:root { --mono: 'IBM Plex Mono', ui-monospace, monospace; --accent-strong: #E04A12; --radius: 6px; }
+/* фоновая сетка 12 колонок по ширине контента */
+body::before { content: ''; position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin-inline: auto; width: min(var(--wrap), 100%); padding-inline: var(--gutter); background-image: repeating-linear-gradient(to right, rgba(18, 18, 18, .055) 0 1px, transparent 1px calc(100% / 12)), linear-gradient(to left, rgba(18, 18, 18, .055) 0 1px, transparent 1px); background-origin: content-box; background-clip: content-box; pointer-events: none; z-index: -1; }
+.mono { font-family: var(--mono); letter-spacing: .02em; direction: ltr; unicode-bidi: isolate; }
+
+/* шапка и кнопки: прямее */
+.hdr { border-bottom: 1.5px solid var(--ink); }
+.hdr.is-scrolled { border-bottom-color: var(--ink); }
+.btn { border-radius: 4px; }
+.nav a { border-radius: 4px; }
+.nav__lang { font-family: var(--mono) !important; font-size: 13px !important; }
+.burger { border-radius: 4px; }
+
+/* строка-индекс под шапкой */
+.idx { display: grid; grid-template-columns: auto 1fr 1fr auto; gap: 12px 28px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--ink); font-size: 14.5px; font-weight: 500; margin-bottom: clamp(32px, 5vw, 64px); }
+.idx .mono { font-size: 12.5px; font-weight: 500; }
+.idx__end { color: var(--muted); }
+
+/* заголовок: выделение цветом вместо подчёркивания */
+.hero__title em { color: var(--accent-strong); }
+.hero__title em::after { display: none; }
+
+/* скриншоты ровные, в строгой рамке, с подписью */
+.hero__media .browser, html[dir=rtl] .hero__media .browser { transform: none; }
+.hero__media .phone, html[dir=rtl] .hero__media .phone { transform: none; }
+.browser { border: 1.5px solid var(--ink); border-radius: 6px; box-shadow: 0 24px 50px -30px rgba(18, 18, 18, .35); }
+.browser__bar { border-bottom: 1.5px solid var(--ink); }
+.fig { font-size: 12px; color: var(--muted); margin-top: 14px; text-align: start; }
+html[dir=rtl] .fig { text-align: right; }
+.hero__media .fig { max-width: 1040px; margin-inline: auto; }
+
+/* бегущая строка строже */
+.band { border-block: 1.5px solid var(--ink); }
+.band i { font-size: .9em; color: #6E6A62; }
+
+/* разделы: чёткие линии, метки «(01) — Название» */
+.sec { border-top: 1.5px solid var(--ink); }
+.eyebrow { font-weight: 500; color: var(--ink); }
+.eyebrow span { border: 0; padding: 0; font: 500 13px/1 var(--mono); }
+.eyebrow span::before { content: '('; }
+.eyebrow span::after { content: ')'; }
+.eyebrow::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: .25; }
+.sec--dark .eyebrow { color: var(--bg); }
+
+/* карточки и элементы: меньше скруглений */
+.grid3, .plan, .care, .form, .next { border-radius: var(--radius); }
+.next { border: 1.5px solid var(--ink); }
+.next:hover { border-color: var(--ink); }
+.next__plus { border-radius: 4px; }
+.tags li, .note, .plan__badge { border-radius: 3px; }
+.form input, .form select, .form textarea { border-radius: 4px; }
+.plan__badge { font-size: 13px; }
+.steps li { border-top-width: 1.5px; }
+.steps__n { font: 500 13px/1 var(--mono); color: var(--muted); letter-spacing: .04em; }
+.steps__n::before { content: '('; } .steps__n::after { content: ')'; }
+.steps h3 { font-size: 24px; margin-top: 16px; }
+.case__meta { font-family: var(--mono); font-size: 12.5px; }
+.ftr p { font-family: var(--mono); font-size: 12.5px; }
+
+@media (max-width: 960px) {
+  .idx { grid-template-columns: auto 1fr; }
+  .idx > :nth-child(3), .idx__end { display: none; }
+}
+
+.hero { padding-top: clamp(16px, 2.4vw, 28px); }

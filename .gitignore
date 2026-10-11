@@ -6,3 +6,4 @@ start.bat
 _source/shots/
 _source/gfonts.css
 .playwright-mcp/
+_source/preview/

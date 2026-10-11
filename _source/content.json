@@ -15,7 +15,7 @@
     "nav": [["#work", "עבודות"], ["#services", "למה אנחנו"], ["#process", "תהליך"], ["#plans", "מחירים"], ["#faq", "שאלות"]],
     "navCta": "בואו נדבר",
     "hero": {
-      "kicker": "עיצוב ובניית אתרים לעסקים",
+      "kicker": "סטודיו לעיצוב ובניית אתרים", "scale": "לעסקים מכל הגדלים",
       "title": ["אתר שמביא", "<em>לקוחות</em>,", "לא רק נראה טוב."],
       "lead": "אנחנו בונים אתרים מהירים וברורים לעסקים מכל הגדלים — מעסק שרק נפתח ועד רשת עם כמה סניפים. כל מי שנכנס לאתר מבין מיד מה אתם מציעים ואיך להגיע אליכם.",
       "cta": "לקבלת הצעה", "cta2": "לעבודות שלנו",
@@ -123,7 +123,7 @@
     "nav": [["#work", "Work"], ["#services", "Why us"], ["#process", "Process"], ["#plans", "Pricing"], ["#faq", "FAQ"]],
     "navCta": "Let's talk",
     "hero": {
-      "kicker": "Website design for businesses",
+      "kicker": "Website design studio", "scale": "For businesses of every size",
       "title": ["A website that brings", "<em>customers</em>,", "not just looks nice."],
       "lead": "We build fast, clear websites for businesses of every size — from one that's just opening to a chain with several branches. Everyone who visits instantly understands what you offer and how to reach you.",
       "cta": "Get a quote", "cta2": "See our work",

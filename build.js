@@ -91,7 +91,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
 <main id="main">
 <section class="hero">
   <div class="wrap">
-    <p class="kicker up">${hero.kicker}</p>
+    <div class="idx up"><span class="mono">(00)</span><span>${hero.kicker}</span><span>${hero.scale}</span><span class="mono idx__end">altshuler.co.il — 2026</span></div>
     <h1 class="hero__title">${hero.title.map((l, i) => `<span class="line up" style="--d:${i * 90}ms">${l}</span>`).join('')}</h1>
     <div class="hero__row">
       <p class="lead up" style="--d:300ms">${hero.lead}</p>
@@ -104,11 +104,12 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
     <div class="hero__media up" style="--d:200ms">
       ${browser(shot('roti-desktop', [720, 1440], work.altDesktop, '(max-width: 1100px) 92vw, 1040px', true, P))}
       ${phone(shot('roti-mobile', [390], work.altMobile, '200px', true, P))}
+      <p class="fig mono">FIG. 01 — ROTISSERIE CHICKEN CLUB / REDESIGN 2026</p>
     </div>
   </div>
 </section>
 
-<div class="band" aria-hidden="true"><div class="band__track">${[0, 1].map(() => `<span>${L.band.map(b => `${b}<i>✳</i>`).join('')}</span>`).join('')}</div></div>
+<div class="band" aria-hidden="true"><div class="band__track">${[0, 1].map(() => `<span>${L.band.map(b => `${b}<i>/</i>`).join('')}</span>`).join('')}</div></div>
 
 <section class="sec" id="work">
   <div class="wrap">
@@ -117,6 +118,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
       <div class="case__media rv">
         ${browser(shot('roti-menu', [720, 1440], work.altMenu, '(max-width: 900px) 92vw, 640px', false, P))}
         ${phone(shot('roti-mobile-menu', [390], work.altMobileMenu, '180px', false, P))}
+        <p class="fig mono">FIG. 02 — MENU / DESKTOP + MOBILE</p>
       </div>
       <div class="case__body rv">
         <p class="case__meta">${work.year}</p>
