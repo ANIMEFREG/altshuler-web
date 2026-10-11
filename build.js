@@ -14,6 +14,8 @@ const CSS = fs.readFileSync(path.join(ROOT, 'css/style.css'), 'utf8')
 
 // шрифты лежат в fonts/ (скачаны _source/get-fonts.js) — без запросов к Google, страница появляется быстрее
 const FONTS = fs.readFileSync(path.join(ROOT, '_source/fonts.css'), 'utf8').replace(/\s+/g, ' ');
+// версия скрипта = хеш содержимого: после правок браузеры сразу берут новый main.js, а не старый из кэша
+const JS_VER = require('crypto').createHash('md5').update(fs.readFileSync(path.join(ROOT, 'js/main.js'))).digest('hex').slice(0, 8);
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 // иконки в стиле Lucide (контур 1.75)
 const ICON = {
@@ -218,7 +220,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
     <a href="#top">${L.footer.top} ↑</a>
   </div>
 </footer>
-<script src="${P}js/main.js" defer></script>
+<script src="${P}js/main.js?v=${JS_VER}" defer></script>
 </body>
 </html>
 `;
