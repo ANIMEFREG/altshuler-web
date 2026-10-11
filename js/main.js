@@ -37,13 +37,15 @@ form.addEventListener('submit', async e => {
   form.querySelectorAll('.err').forEach(el => el.remove());
   let bad = null;
   form.querySelectorAll('[required]').forEach(input => {
-    const ok = input.value.trim().length > 1;
+    const v = input.value.trim();
+    const isEmail = input.type === 'email';
+    const ok = isEmail ? /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) : v.length > 1;
     input.classList.toggle('is-bad', !ok);
     input.setAttribute('aria-invalid', !ok);
     if (!ok) {
       const msg = document.createElement('span');
       msg.className = 'err';
-      msg.textContent = form.dataset.required;
+      msg.textContent = isEmail && v ? form.dataset.badEmail : form.dataset.required;
       input.after(msg);
       bad = bad || input;
     }
@@ -59,7 +61,7 @@ form.addEventListener('submit', async e => {
   data.subject = `${form.dataset.subject} — ${f.business.value.trim() || f.name.value.trim()}`;
   data.access_key = form.dataset.key;
   data.from_name = 'altshuler.co.il';
-  if (f.email.value.trim()) data.replyto = f.email.value.trim();
+  data.replyto = f.email.value.trim();
   const status = form.querySelector('.form__status');
   const btn = form.querySelector('button[type=submit]');
   btn.disabled = true;

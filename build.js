@@ -196,11 +196,11 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
       <p class="lead">${contact.lead}</p>
       <p class="contact__mail">${contact.or}<a href="mailto:${C.email}" dir="ltr">${C.email}</a></p>
     </div>
-    <form class="form" id="form" novalidate data-email="${C.email}" data-key="${C.formKey}" data-subject="${esc(contact.subject)}" data-sent="${esc(contact.sent)}" data-sending="${esc(contact.sending)}" data-error="${esc(contact.error)}" data-required="${esc(contact.required)}">
+    <form class="form" id="form" novalidate data-email="${C.email}" data-key="${C.formKey}" data-subject="${esc(contact.subject)}" data-sent="${esc(contact.sent)}" data-sending="${esc(contact.sending)}" data-error="${esc(contact.error)}" data-required="${esc(contact.required)}" data-bad-email="${esc(contact.badEmail)}">
       <label>${contact.name}<input name="name" autocomplete="name" required></label>
       <label>${contact.business}<input name="business" autocomplete="organization"></label>
       <label>${contact.phone}<input name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" required></label>
-      <label>${contact.emailLabel}<input name="email" type="email" autocomplete="email" dir="ltr"></label>
+      <label>${contact.emailLabel}<input name="email" type="email" autocomplete="email" dir="ltr" required></label>
       <label class="full">${contact.plan}<select name="plan">${contact.planOptions.map(o => `<option>${o}</option>`).join('')}</select></label>
       <label class="full">${contact.message}<textarea name="message" rows="4" placeholder="${esc(contact.messagePh)}"></textarea></label>
       <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
