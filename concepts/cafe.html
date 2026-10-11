@@ -1,33 +1,46 @@
 <!doctype html>
 <html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1"><title>קפה לילה — קונספט</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&family=Frank+Ruhl+Libre:wght@400;500&display=swap">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{background:#F5EEDF;color:#2F3A2A;font-family:Assistant,sans-serif}
-nav{display:flex;justify-content:space-between;align-items:center;padding:26px 6vw}
-.logo{font:400 30px 'Suez One',serif;color:#4E6B3A}.logo small{font:600 12px Assistant;color:#9A8B6E;margin-right:8px}
-.links{display:flex;gap:30px;font-size:16px;font-weight:600}
-.order{background:#4E6B3A;color:#F5EEDF;padding:12px 22px;border-radius:999px;font-weight:700;font-size:15px}
-.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:5vw;align-items:center;padding:3vw 6vw 5vw;min-height:calc(100vh - 92px)}
-.chip{display:inline-block;background:#E5D9BF;color:#6B5B3B;padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px}
-h1{font:400 clamp(46px,6vw,92px)/1.05 'Suez One',serif;margin-top:22px;color:#2F3A2A}h1 span{color:#B4602F}
-p{font-size:20px;line-height:1.65;color:#5A5546;margin-top:22px;max-width:28em}
-.cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-.cta a{padding:17px 28px;border-radius:999px;font-weight:700;font-size:16px}
-.a1{background:#B4602F;color:#fff}.a2{border:2px solid #2F3A2A}
-.menu{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}.menu span{border:1.5px solid #CDBE9C;padding:8px 14px;border-radius:12px;font-size:15px}
-.photo{position:relative;height:min(74vh,640px);border-radius:220px 220px 24px 24px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(47,58,42,.5)}
-.photo img{width:100%;height:100%;object-fit:cover}
-.badge{position:absolute;bottom:26px;right:26px;background:#F5EEDF;padding:14px 18px;border-radius:16px;font-weight:700;font-size:15px}.badge small{display:block;font-weight:400;color:#6B5B3B}
-@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr}.photo{height:46vh;order:-1;border-radius:160px 160px 20px 20px}}
+*{box-sizing:border-box;margin:0;padding:0}body{background:#F3EDE2;color:#23301F;font-family:Heebo,sans-serif}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.txt{display:flex;flex-direction:column;padding:28px 5vw 36px}
+nav{display:flex;justify-content:space-between;align-items:center}
+.logo{font:500 26px 'Frank Ruhl Libre',serif;color:#23301F}.logo small{display:block;font:500 11px Heebo;letter-spacing:.18em;color:#8A7F6A;margin-top:2px}
+.links{display:flex;gap:26px;font-size:15px;font-weight:500;color:#4D5847}
+.mid{flex:1;display:flex;flex-direction:column;justify-content:center;padding:4vh 0}
+.k{font-size:13px;font-weight:700;letter-spacing:.14em;color:#A0532A}
+h1{font:800 clamp(46px,5.4vw,84px)/1.02 Heebo;letter-spacing:-.02em;margin-top:16px}
+h1 em{font:400 1em/1 'Frank Ruhl Libre',serif;font-style:normal;color:#A0532A}
+p{font-weight:300;font-size:19px;line-height:1.65;color:#4D5847;margin-top:20px;max-width:27em}
+.cta{display:flex;gap:12px;margin-top:30px}
+.cta a{padding:16px 26px;font-weight:700;font-size:15px}
+.a1{background:#23301F;color:#F3EDE2}.a2{border:1.5px solid #23301F}
+.menu{margin-top:36px;max-width:420px;border-top:1px solid #CFC4AE;padding-top:18px}
+.menu h3{font:500 14px Heebo;letter-spacing:.14em;color:#8A7F6A;margin-bottom:10px}
+.row{display:flex;align-items:baseline;gap:10px;font-size:17px;padding:6px 0}
+.row i{flex:1;border-bottom:1.5px dotted #B9AD94;transform:translateY(-4px)}
+.row b{font-weight:500;direction:ltr}
+.info{display:flex;gap:28px;font-size:14px;color:#6A6452;border-top:1px solid #CFC4AE;padding-top:16px}
+.info b{color:#23301F}
+.photo{background:url(cafe.jpg) center/cover;position:relative}
+.photo span{position:absolute;bottom:24px;right:24px;background:#F3EDE2;padding:10px 14px;font-size:13px;font-weight:700}
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr}.photo{min-height:42vh;order:-1}.cta{flex-direction:column}.cta a{text-align:center}.info{flex-wrap:wrap;gap:14px}}
 </style></head><body>
-<nav><span class="logo">קפה לילה<small>בית קפה שכונתי</small></span><div class="links"><span>תפריט</span><span>ארוחות בוקר</span><span>אירועים</span><span>הגעה</span></div><span class="order">להזמנת מקום</span></nav>
 <section class="hero">
-<div>
-<span class="chip">☕ פתוח עכשיו · עד 23:00</span>
-<h1>הבוקר הכי טוב <span>בשכונה</span>.</h1>
-<p>קפה קלוי במקום, מאפים מהתנור וארוחות בוקר עד הצהריים. בואו לשבת, לעבוד או סתם להתעכב עוד קצת.</p>
-<div class="cta"><a class="a1">לתפריט המלא</a><a class="a2">משלוח עד הבית</a></div>
-<div class="menu"><span>אספרסו 12 ₪</span><span>שקשוקה 52 ₪</span><span>קרואסון שקדים 18 ₪</span></div>
+<div class="txt">
+<nav><span class="logo">קפה לילה<small>EST. 2019 · ראשון לציון</small></span><div class="links"><span>תפריט</span><span>ארוחות בוקר</span><span>אירועים</span><span>הגעה</span></div></nav>
+<div class="mid">
+<p class="k">בית קפה שכונתי</p>
+<h1>הבוקר הכי טוב <em>בשכונה.</em></h1>
+<p>קפה קלוי במקום, מאפים מהתנור וארוחות בוקר עד הצהריים. מקום לשבת, לעבוד, או סתם להתעכב עוד קצת.</p>
+<div class="cta"><a class="a1">להזמנת שולחן</a><a class="a2">לתפריט המלא</a></div>
+<div class="menu"><h3>מהתפריט</h3>
+<div class="row">אספרסו כפול<i></i><b>12 ₪</b></div>
+<div class="row">שקשוקה עם לחם מחמצת<i></i><b>52 ₪</b></div>
+<div class="row">קרואסון שקדים<i></i><b>18 ₪</b></div></div>
 </div>
-<div class="photo"><img src="cafe.jpg" alt=""><div class="badge">7 ימים בשבוע<small>מ־07:00 בבוקר</small></div></div>
+<div class="info"><span><b>א׳–ש׳</b> 07:00–23:00</span><span><b>רוטשילד 12</b> · ראשון לציון</span></div>
+</div>
+<div class="photo"><span>פתוח עכשיו</span></div>
 </section><a href="../" style="position:fixed;bottom:16px;left:16px;z-index:9;background:#121212;color:#F4F1EA;font:500 13px/1 Heebo,sans-serif;padding:11px 14px;border-radius:4px;text-decoration:none;direction:rtl">קונספט לדוגמה · עיצוב: altshuler.</a></body></html>
