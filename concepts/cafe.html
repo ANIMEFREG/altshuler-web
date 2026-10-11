@@ -1,46 +1,224 @@
 <!doctype html>
-<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1"><title>קפה לילה — קונספט</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&family=Frank+Ruhl+Libre:wght@400;500&display=swap">
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>קפה לילה — קפה ומאפייה שכונתית | קונספט</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&family=Assistant:wght@300;400;600;700;800&display=swap">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{background:#F3EDE2;color:#23301F;font-family:Heebo,sans-serif}
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
-.txt{display:flex;flex-direction:column;padding:28px 5vw 36px}
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font:500 26px 'Frank Ruhl Libre',serif;color:#23301F}.logo small{display:block;font:500 11px Heebo;letter-spacing:.18em;color:#8A7F6A;margin-top:2px}
-.links{display:flex;gap:26px;font-size:15px;font-weight:500;color:#4D5847}
-.mid{flex:1;display:flex;flex-direction:column;justify-content:center;padding:4vh 0}
-.k{font-size:13px;font-weight:700;letter-spacing:.14em;color:#A0532A}
-h1{font:800 clamp(46px,5.4vw,84px)/1.02 Heebo;letter-spacing:-.02em;margin-top:16px}
-h1 em{font:400 1em/1 'Frank Ruhl Libre',serif;font-style:normal;color:#A0532A}
-p{font-weight:300;font-size:19px;line-height:1.65;color:#4D5847;margin-top:20px;max-width:27em}
-.cta{display:flex;gap:12px;margin-top:30px}
-.cta a{padding:16px 26px;font-weight:700;font-size:15px}
-.a1{background:#23301F;color:#F3EDE2}.a2{border:1.5px solid #23301F}
-.menu{margin-top:36px;max-width:420px;border-top:1px solid #CFC4AE;padding-top:18px}
-.menu h3{font:500 14px Heebo;letter-spacing:.14em;color:#8A7F6A;margin-bottom:10px}
-.row{display:flex;align-items:baseline;gap:10px;font-size:17px;padding:6px 0}
-.row i{flex:1;border-bottom:1.5px dotted #B9AD94;transform:translateY(-4px)}
-.row b{font-weight:500;direction:ltr}
-.info{display:flex;gap:28px;font-size:14px;color:#6A6452;border-top:1px solid #CFC4AE;padding-top:16px}
-.info b{color:#23301F}
-.photo{background:url(cafe.jpg) center/cover;position:relative}
-.photo span{position:absolute;bottom:24px;right:24px;background:#F3EDE2;padding:10px 14px;font-size:13px;font-weight:700}
-@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr}.photo{min-height:42vh;order:-1}.cta{flex-direction:column}.cta a{text-align:center}.info{flex-wrap:wrap;gap:14px}}
-</style></head><body>
-<section class="hero">
-<div class="txt">
-<nav><span class="logo">קפה לילה<small>EST. 2019 · ראשון לציון</small></span><div class="links"><span>תפריט</span><span>ארוחות בוקר</span><span>אירועים</span><span>הגעה</span></div></nav>
-<div class="mid">
-<p class="k">בית קפה שכונתי</p>
-<h1>הבוקר הכי טוב <em>בשכונה.</em></h1>
-<p>קפה קלוי במקום, מאפים מהתנור וארוחות בוקר עד הצהריים. מקום לשבת, לעבוד, או סתם להתעכב עוד קצת.</p>
-<div class="cta"><a class="a1">להזמנת שולחן</a><a class="a2">לתפריט המלא</a></div>
-<div class="menu"><h3>מהתפריט</h3>
-<div class="row">אספרסו כפול<i></i><b>12 ₪</b></div>
-<div class="row">שקשוקה עם לחם מחמצת<i></i><b>52 ₪</b></div>
-<div class="row">קרואסון שקדים<i></i><b>18 ₪</b></div></div>
-</div>
-<div class="info"><span><b>א׳–ש׳</b> 07:00–23:00</span><span><b>רוטשילד 12</b> · ראשון לציון</span></div>
-</div>
-<div class="photo"><span>פתוח עכשיו</span></div>
-</section><a href="../" style="position:fixed;bottom:16px;left:16px;z-index:9;background:#121212;color:#F4F1EA;font:500 13px/1 Heebo,sans-serif;padding:11px 14px;border-radius:4px;text-decoration:none;direction:rtl">קונספט לדוגמה · עיצוב: altshuler.</a></body></html>
+:root{--cream:#F7F1E8;--paper:#FFFBF4;--ink:#2B1E16;--ink2:#5B4A3E;--muted:#8A796B;--line:#E6DACB;--terra:#C2552A;--terra-d:#A84722;--sage:#7C8B63;--display:'Secular One','Assistant',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.65 'Assistant',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-terra{background:var(--terra);color:#fff}.btn-terra:hover{background:var(--terra-d)}
+.btn-ghost{border:1.5px solid currentColor}
+.eyebrow{font-weight:800;font-size:13px;letter-spacing:.16em;color:var(--terra)}
+h2{font:400 clamp(34px,4.6vw,60px)/1.05 var(--display);letter-spacing:-.005em}
+
+/* header */
+.hdr{position:relative;z-index:5}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.logo{display:flex;align-items:baseline;gap:10px}.logo b{font:400 34px/1 var(--display)}.logo small{font-weight:600;font-size:13px;color:var(--muted)}
+.nav{display:flex;gap:30px;font-weight:600;font-size:15.5px;color:var(--ink2)}.nav a:hover{color:var(--ink)}
+.hdr .btn{min-height:44px;padding:0 20px;font-size:15px;background:var(--ink);color:var(--cream)}
+
+/* hero: текст справа на креме, фото слева в панели */
+.hero{padding:8px 0 clamp(48px,6vw,80px)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.12fr;gap:clamp(32px,5vw,72px);align-items:center;min-height:calc(100vh - 140px)}
+.open{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.open i{width:8px;height:8px;border-radius:50%;background:#3FA34D;box-shadow:0 0 0 4px rgba(63,163,77,.18)}
+.hero h1{font:400 clamp(48px,5.6vw,88px)/1.02 var(--display);margin-top:22px}
+.hero h1 span{color:var(--terra)}
+.hero p{font-size:20px;font-weight:300;max-width:26em;margin-top:22px;color:var(--ink2)}
+.hero .cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.hero .btn-ghost{color:var(--ink)}
+.strip{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 36px;margin-top:44px;padding-top:22px;border-top:1px solid var(--line)}
+.strip div{font-size:14.5px;color:var(--muted)}.strip b{display:block;color:var(--ink);font-size:16px}
+.hero__ph{position:relative;height:min(78vh,700px)}
+.hero__ph .main{width:100%;height:100%;object-fit:cover;border-radius:28px 28px 28px 200px}
+.hero__ph .float{position:absolute;bottom:34px;right:-34px;width:clamp(150px,15vw,210px);background:var(--paper);border-radius:20px;padding:10px 10px 14px;box-shadow:0 26px 50px -24px rgba(43,30,22,.45)}
+.hero__ph .float img{border-radius:12px;aspect-ratio:1;object-fit:cover}
+.hero__ph .float b{display:block;font:400 18px var(--display);margin-top:10px;padding-inline:4px}
+.hero__ph .float span{font-size:13px;color:var(--muted);padding-inline:4px}
+
+/* breakfast cards */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.head p{max-width:28em;color:var(--ink2)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{background:var(--paper);border-radius:22px;overflow:hidden;box-shadow:0 1px 0 var(--line)}
+.card .ph{aspect-ratio:4/3.4;overflow:hidden}.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover img{transform:scale(1.04)}
+.card .t{padding:20px 22px 24px}
+.card .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.card h3{font:400 24px/1.2 var(--display)}
+.card .pr{font-weight:800;color:var(--terra);font-size:18px;white-space:nowrap}
+.card p{color:var(--ink2);font-size:15.5px;margin-top:6px}
+
+/* story */
+.story{background:var(--paper);border-block:1px solid var(--line)}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center}
+.story .ph{position:relative}
+.story .ph img{border-radius:220px 220px 22px 22px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.story .ph .mini{position:absolute;width:42%;bottom:-28px;left:-24px;border-radius:18px;aspect-ratio:1;border:6px solid var(--paper)}
+.story p{color:var(--ink2);margin-top:18px;font-size:18px}
+.facts{display:flex;gap:40px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.facts b{display:block;font:400 34px/1 var(--display);color:var(--terra)}.facts span{font-size:14px;color:var(--muted)}
+
+/* menu */
+.menu{background:var(--ink);color:#F3E9DC}
+.menu .eyebrow{color:#F2B48E}
+.menu .head p{color:#C9B9A8}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px);margin-top:48px}
+.col h3{font:400 26px var(--display);padding-bottom:12px;border-bottom:1.5px solid rgba(243,233,220,.25);margin-bottom:10px}
+.it{display:flex;align-items:baseline;gap:10px;padding:9px 0}
+.it span{font-weight:600}.it small{display:block;font-size:13.5px;color:#B8A897;font-weight:400}
+.it i{flex:1;border-bottom:1.5px dotted rgba(243,233,220,.3);transform:translateY(-5px)}
+.it b{font-weight:800;color:#F2B48E;white-space:nowrap}
+.menu .center{text-align:center;margin-top:44px}
+.menu .btn-ghost{color:#F3E9DC}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px;margin-top:44px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+.gal img:first-child{grid-row:span 2}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,3vw,40px)}
+.hours div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:17px}
+.hours div:last-child{border:0}.hours b{font-weight:700}
+.hours .today{color:var(--terra);font-weight:800}
+.map{position:relative;background:linear-gradient(135deg,#EDE3D4,#E4D7C4);border-radius:16px;height:200px;margin-top:22px;overflow:hidden}
+.map::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(43,30,22,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(43,30,22,.07) 2px,transparent 2px);background-size:38px 38px;transform:rotate(-8deg) scale(1.3)}
+.pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-80%);background:var(--terra);color:#fff;font-weight:800;font-size:14px;padding:9px 14px;border-radius:12px;box-shadow:0 10px 20px -8px rgba(0,0,0,.4)}
+.pin::after{content:'';position:absolute;left:50%;bottom:-7px;border:7px solid transparent;border-top-color:var(--terra);border-bottom:0;transform:translateX(-50%)}
+.order{background:var(--terra);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between}
+.order h2{color:#fff}.order p{color:#FBE3D6;margin-top:16px;font-size:18px;max-width:24em}
+.order .cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.order .btn-w{background:#fff;color:var(--terra)}.order .btn-ghost{color:#fff}
+
+footer{padding:34px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media(max-width:900px){
+ .nav{display:none}
+ .cards,.cols{grid-template-columns:1fr}
+ .story .wrap,.visit .wrap{grid-template-columns:1fr}
+ .story .ph .mini{left:-8px}
+ .gal{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}
+ .gal img:first-child{grid-row:auto;grid-column:span 2}
+ .strip{grid-template-columns:1fr;gap:10px}
+ .hero .wrap{grid-template-columns:1fr;min-height:0}
+ .hero__ph{height:56vh;order:-1}
+ .hero__ph .float{right:auto;left:12px;bottom:-18px;width:118px;padding:7px 7px 10px}
+ .hero__ph .float b{font-size:15px;margin-top:6px}
+ .hero__ph .float span{font-size:12px}
+ .strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.hdr .btn{display:none}.hero .cta .btn{flex:1}.facts{gap:22px}}
+</style>
+</head>
+<body>
+
+<header class="hdr"><div class="wrap">
+  <a class="logo" href="#"><b>לילה</b><small>קפה · מאפייה</small></a>
+  <nav class="nav"><a href="#breakfast">ארוחות בוקר</a><a href="#menu">תפריט</a><a href="#story">עלינו</a><a href="#visit">שעות והגעה</a></nav>
+  <a class="btn" href="#visit">להזמנת שולחן</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="open"><i></i>פתוח עכשיו · עד 23:00</span>
+    <h1>קפה טוב, מאפים חמים <span>ובוקר שלא ממהר.</span></h1>
+    <p>בית קפה ומאפייה שכונתית. קולים את הפולים כל שבוע, אופים כל בוקר מ־05:30, ומגישים ארוחות בוקר עד 14:00.</p>
+    <div class="cta"><a class="btn btn-terra" href="#menu">לתפריט</a><a class="btn btn-ghost" href="#visit">להזמנת שולחן</a></div>
+    <div class="strip"><div><b>א׳–ש׳ · 07:00–23:00</b>ארוחת בוקר עד 14:00</div><div><b>רוטשילד 12</b>ראשון לציון</div><div><b>משלוחים בוולט</b>או איסוף תוך 15 דק׳</div></div>
+  </div>
+  <div class="hero__ph"><img class="main" src="cafe-img/hero.jpg" alt="מזיגת חלב ללאטה" fetchpriority="high"><div class="float"><img src="cafe-img/croissant.jpg" alt=""><b>יצא מהתנור</b><span>קרואסון חמאה · 16 ₪</span></div></div>
+</div></section>
+
+<section class="sec" id="breakfast"><div class="wrap">
+  <div class="head rv"><div><p class="eyebrow">ארוחות בוקר</p><h2>מה מזמינים אצלנו<br>הכי הרבה.</h2></div><p>הכל מוכן במקום, מחומרי גלם של ספקים מהאזור. ארוחות הבוקר מוגשות עם קפה או מיץ סחוט לבחירה.</p></div>
+  <div class="cards">
+    <article class="card rv"><div class="ph"><img src="cafe-img/breakfast.jpg" alt="ארוחת בוקר זוגית על שולחן" loading="lazy"></div><div class="t"><div class="row"><h3>ארוחת בוקר לשניים</h3><span class="pr">128 ₪</span></div><p>ביצים לבחירה, וופל, יוגורט ופירות, סלט, גבינות, מאפה ושתייה חמה.</p></div></article>
+    <article class="card rv" style="transition-delay:.08s"><div class="ph"><img src="cafe-img/shakshuka.jpg" alt="שקשוקה במחבת" loading="lazy"></div><div class="t"><div class="row"><h3>שקשוקה של הבית</h3><span class="pr">54 ₪</span></div><p>עגבניות צלויות, פלפלים, שתי ביצים וחלב טרי, עם לחם מחמצת מהתנור.</p></div></article>
+    <article class="card rv" style="transition-delay:.16s"><div class="ph"><img src="cafe-img/croissant.jpg" alt="קרואסון חמאה" loading="lazy"></div><div class="t"><div class="row"><h3>קרואסון חמאה</h3><span class="pr">16 ₪</span></div><p>48 שעות של בצק עלים. יוצא מהתנור כל שעה עגולה עד הצהריים.</p></div></article>
+  </div>
+</div></section>
+
+<section class="sec story" id="story"><div class="wrap">
+  <div class="ph rv"><img src="cafe-img/interior.jpg" alt="פנים בית הקפה" loading="lazy"><img class="mini" src="cafe-img/barista.jpg" alt="בריסטה מכינה לאטה" loading="lazy"></div>
+  <div class="rv">
+    <p class="eyebrow">עלינו</p>
+    <h2>בית קפה שכונתי,<br>במובן הכי טוב.</h2>
+    <p>התחלנו ב־2019 עם מכונת אספרסו אחת ושלושה שולחנות. היום אנחנו קולים בעצמנו, אופים כל בוקר, ועדיין זוכרים בשם את רוב מי שנכנס.</p>
+    <p>אפשר לשבת לעבוד עם לפטופ, לפגוש חברים או לקפוץ לקפה בדרך. ה־Wi-Fi חופשי, השקעים ליד כל שולחן.</p>
+    <div class="facts"><div><b>2019</b><span>פתחנו את הדלת</span></div><div><b>כל שבוע</b><span>קלייה טרייה</span></div><div><b>05:30</b><span>התנור נדלק</span></div></div>
+  </div>
+</div></section>
+
+<section class="sec menu" id="menu"><div class="wrap">
+  <div class="head rv"><div><p class="eyebrow">התפריט</p><h2>מהבר ומהתנור.</h2></div><p>מבחר חלקי. התפריט המלא, כולל אפשרויות טבעוניות וללא גלוטן — בקישור למטה.</p></div>
+  <div class="cols">
+    <div class="col rv"><h3>קפה</h3>
+      <div class="it"><span>אספרסו כפול</span><i></i><b>12 ₪</b></div>
+      <div class="it"><span>הפוך<small>חלב רגיל, שיבולת שועל או שקדים</small></span><i></i><b>16 ₪</b></div>
+      <div class="it"><span>פלאט וייט</span><i></i><b>17 ₪</b></div>
+      <div class="it"><span>קולד ברו<small>חליטה של 18 שעות</small></span><i></i><b>19 ₪</b></div>
+    </div>
+    <div class="col rv" style="transition-delay:.08s"><h3>ארוחות בוקר</h3>
+      <div class="it"><span>ארוחת בוקר לשניים</span><i></i><b>128 ₪</b></div>
+      <div class="it"><span>שקשוקה של הבית</span><i></i><b>54 ₪</b></div>
+      <div class="it"><span>טוסט אבוקדו<small>מחמצת, ביצה עלומה, צ׳ילי</small></span><i></i><b>48 ₪</b></div>
+      <div class="it"><span>גרנולה ביתית</span><i></i><b>38 ₪</b></div>
+    </div>
+    <div class="col rv" style="transition-delay:.16s"><h3>מהתנור</h3>
+      <div class="it"><span>קרואסון חמאה</span><i></i><b>16 ₪</b></div>
+      <div class="it"><span>קרואסון שקדים</span><i></i><b>19 ₪</b></div>
+      <div class="it"><span>רוגלך שוקולד<small>חבילה של 6</small></span><i></i><b>24 ₪</b></div>
+      <div class="it"><span>עוגת גבינה פירורים</span><i></i><b>29 ₪</b></div>
+    </div>
+  </div>
+  <div class="center rv"><a class="btn btn-ghost" href="#">לתפריט המלא (PDF)</a></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="head rv"><div><p class="eyebrow">רגעים מהבר</p><h2>תבואו לראות בעצמכם.</h2></div><p>עוקבים אחרינו באינסטגרם? שם מעדכנים כל בוקר מה יצא מהתנור.</p></div>
+  <div class="gal rv"><img src="cafe-img/pastry.jpg" alt="ויטרינת מאפים" loading="lazy"><img src="cafe-img/latte.jpg" alt="לאטה על שולחן עץ" loading="lazy"><img src="cafe-img/cups.jpg" alt="ארבע כוסות לאטה" loading="lazy"><img src="cafe-img/barista.jpg" alt="בריסטה בעבודה" loading="lazy"><img src="cafe-img/croissant.jpg" alt="קרואסון" loading="lazy"></div>
+</div></section>
+
+<section class="sec visit" id="visit" style="padding-top:0"><div class="wrap">
+  <div class="box rv"><p class="eyebrow">שעות והגעה</p>
+    <div class="hours" style="margin-top:14px">
+      <div><b>ראשון–חמישי</b><span>07:00–23:00</span></div>
+      <div class="today"><b>שישי</b><span>07:00–16:00</span></div>
+      <div><b>שבת</b><span>09:00–23:00</span></div>
+    </div>
+    <div class="map" aria-hidden="true"><span class="pin">קפה לילה · רוטשילד 12</span></div>
+  </div>
+  <div class="box order rv" style="transition-delay:.08s">
+    <div><h2>שמרו לכם שולחן,<br>או תזמינו הביתה.</h2><p>בסופ״ש מומלץ להזמין מראש. משלוחים בוולט, או איסוף עצמי — ההזמנה מוכנה תוך 15 דקות.</p></div>
+    <div class="cta"><a class="btn btn-w" href="#">להזמנת שולחן</a><a class="btn btn-ghost" href="#">להזמנה בוולט</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© קפה לילה · רוטשילד 12, ראשון לציון</span><span>אינסטגרם · פייסבוק · וואטסאפ</span></div></footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<a href="../" style="position:fixed;bottom:16px;right:16px;z-index:30;background:#121212;color:#F4F1EA;font:500 13px/1 Heebo,Assistant,sans-serif;padding:11px 14px;border-radius:4px;text-decoration:none;direction:rtl;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)">קונספט לדוגמה · עיצוב: altshuler.</a></body>
+</html>
