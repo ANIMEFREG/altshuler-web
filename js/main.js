@@ -31,8 +31,8 @@ document.querySelectorAll('[data-plan]').forEach(a => a.addEventListener('click'
   form.elements.plan.selectedIndex = +a.dataset.plan;
 }));
 
-// форма: проверка + открывает почту с готовым письмом (сервера для отправки пока нет)
-form.addEventListener('submit', e => {
+// форма: проверка + отправка через Web3Forms (ключ в data-key; заявка приходит на studio@, без перехода в почтовую программу)
+form.addEventListener('submit', async e => {
   e.preventDefault();
   form.querySelectorAll('.err').forEach(el => el.remove());
   let bad = null;
@@ -50,13 +50,35 @@ form.addEventListener('submit', e => {
   });
   if (bad) { bad.focus(); return; }
   const f = form.elements;
-  const lines = [...form.querySelectorAll('label')].map(l => {
+  if (f.botcheck.value) return; // бот заполнил скрытое поле
+  const data = {};
+  form.querySelectorAll('label').forEach(l => {
     const el = l.querySelector('input, select, textarea');
-    return el.value.trim() ? `${l.firstChild.textContent.trim()}: ${el.value.trim()}` : null;
-  }).filter(Boolean);
-  const subject = `${form.dataset.subject} — ${f.business.value.trim() || f.name.value.trim()}`;
-  location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
-  form.querySelector('.form__status').textContent = form.dataset.sent;
+    if (el.value.trim()) data[l.firstChild.textContent.trim()] = el.value.trim();
+  });
+  data.subject = `${form.dataset.subject} — ${f.business.value.trim() || f.name.value.trim()}`;
+  data.access_key = form.dataset.key;
+  data.from_name = 'altshuler.co.il';
+  if (f.email.value.trim()) data.replyto = f.email.value.trim();
+  const status = form.querySelector('.form__status');
+  const btn = form.querySelector('button[type=submit]');
+  btn.disabled = true;
+  status.textContent = form.dataset.sending;
+  try {
+    const r = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const res = await r.json().catch(() => ({}));
+    if (!r.ok || res.success !== true) throw new Error(res.message || r.status);
+    form.reset();
+    status.textContent = form.dataset.sent;
+  } catch (err) {
+    status.textContent = form.dataset.error;
+  } finally {
+    btn.disabled = false;
+  }
 });
 
 document.getElementById('y').textContent = new Date().getFullYear();

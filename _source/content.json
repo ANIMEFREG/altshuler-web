@@ -1,5 +1,6 @@
 {
   "email": "studio@altshuler.co.il",
+  "formKey": "59d8ffc4-de16-451d-babe-17505585dd2b",
   "rotisserieUrl": "https://animefreg.github.io/rotisserie/",
   "demoHost": "animefreg.github.io/rotisserie",
   "officialUrl": "https://www.rotisserie.co.il/",
@@ -107,7 +108,7 @@
       "name": "שם", "business": "שם העסק", "phone": "טלפון", "emailLabel": "מייל (לא חובה)",
       "plan": "מה מעניין אתכם?", "planOptions": ["עוד לא בטוח/ה", "דף נחיתה", "אתר עסקי", "אתר פרימיום", "רק תחזוקה לאתר קיים"],
       "message": "ספרו בקצרה על העסק", "messagePh": "למשל: מספרה בחיפה, אין לנו אתר, רוצים שיזמינו תורים",
-      "send": "שליחה", "required": "שדה חובה", "sent": "נפתח חלון מייל עם הפרטים — נשאר רק ללחוץ \"שליחה\".",
+      "send": "שליחה", "required": "שדה חובה", "sent": "תודה! הפנייה נשלחה — נחזור אליכם בהקדם.", "sending": "שולח…", "error": "משהו השתבש. נסו שוב או כתבו לנו ישירות למייל.",
       "subject": "פנייה מהאתר", "or": "או במייל"
     },
     "footer": { "rights": "כל הזכויות שמורות", "top": "חזרה למעלה" }
@@ -215,7 +216,7 @@
       "name": "Name", "business": "Business name", "phone": "Phone", "emailLabel": "Email (optional)",
       "plan": "What are you interested in?", "planOptions": ["Not sure yet", "Landing page", "Business site", "Premium site", "Just care for an existing site"],
       "message": "Tell us briefly about your business", "messagePh": "e.g. a barbershop in Haifa, no website yet, want online bookings",
-      "send": "Send", "required": "Required", "sent": "An email window opened with your details — just press \"Send\".",
+      "send": "Send", "required": "Required", "sent": "Thank you! Your enquiry was sent — we will get back to you soon.", "sending": "Sending…", "error": "Something went wrong. Please try again or email us directly.",
       "subject": "Website enquiry", "or": "or by email"
     },
     "footer": { "rights": "All rights reserved", "top": "Back to top" }
