@@ -1,5 +1,6 @@
 {
   "email": "studio@altshuler.co.il",
+  "phone": "050-000-0000", "whatsapp": "972500000000",
   "formKey": "59d8ffc4-de16-451d-babe-17505585dd2b",
   "rotisserieUrl": "https://animefreg.github.io/rotisserie/",
   "demoHost": "animefreg.github.io/rotisserie",
@@ -35,6 +36,8 @@
       "note": "זוהי גרסת הדגמה שבנינו לתיק העבודות, ואינה האתר הרשמי של הרשת. האתר הרשמי:",
       "altDesktop": "עמוד הבית של אתר רוטיסרי במחשב", "altMenu": "עמוד התפריט של רוטיסרי במחשב",
       "altMobile": "עמוד הבית של רוטיסרי בטלפון", "altMobileMenu": "התפריט של רוטיסרי בטלפון",
+      "conceptsTitle": "קונספטים — כך זה יכול להיראות אצלכם", "conceptLabel": "קונספט", "conceptOpen": "לצפייה",
+      "concepts": [["barber", "BARBER 17", "מספרת גברים"], ["cafe", "קפה לילה", "בית קפה שכונתי"], ["dental", "סמייל", "מרפאת שיניים"]],
       "nextTitle": "הפרויקט הבא יכול להיות שלכם.",
       "nextText": "אין לכם אתר, או שיש אתר שלא באמת עובד בשבילכם? שלחו לנו קישור — נגיד לכם בכנות מה היינו משפרים.",
       "nextCta": "שלחו לנו את האתר שלכם"
@@ -104,7 +107,7 @@
     "contact": {
       "eyebrow": "צרו קשר",
       "title": "בואו נדבר על האתר שלכם.",
-      "lead": "השאירו פרטים ונחזור אליכם. אפשר גם לכתוב ישירות למייל.",
+      "lead": "קפה, שיחת זום או הודעה בוואטסאפ — איך שנוח לכם. השאירו פרטים ונחזור אליכם בהקדם.",
       "name": "שם", "business": "שם העסק", "phone": "טלפון", "emailLabel": "מייל", "badEmail": "כתובת מייל לא תקינה",
       "plan": "מה מעניין אתכם?", "planOptions": ["עוד לא בטוח/ה", "דף נחיתה", "אתר עסקי", "אתר פרימיום", "רק תחזוקה לאתר קיים"],
       "message": "ספרו בקצרה על העסק", "messagePh": "למשל: מספרה בחיפה, אין לנו אתר, רוצים שיזמינו תורים",
@@ -143,6 +146,8 @@
       "note": "This is a demo version we built for our portfolio, not the chain's official website. The official site:",
       "altDesktop": "Rotisserie home page on desktop", "altMenu": "Rotisserie menu page on desktop",
       "altMobile": "Rotisserie home page on a phone", "altMobileMenu": "Rotisserie menu on a phone",
+      "conceptsTitle": "Concepts — what yours could look like", "conceptLabel": "Concept", "conceptOpen": "View",
+      "concepts": [["barber", "BARBER 17", "Barbershop"], ["cafe", "Café Lila", "Neighbourhood café"], ["dental", "Smile", "Dental clinic"]],
       "nextTitle": "The next project could be yours.",
       "nextText": "No website yet — or one that doesn't really work for you? Send us a link and we'll tell you honestly what we'd improve.",
       "nextCta": "Send us your site"
@@ -212,7 +217,7 @@
     "contact": {
       "eyebrow": "Contact",
       "title": "Let's talk about your website.",
-      "lead": "Leave your details and we'll get back to you. Or email us directly.",
+      "lead": "Coffee, a Zoom call or a WhatsApp message — whatever suits you. Leave your details and we'll get back to you soon.",
       "name": "Name", "business": "Business name", "phone": "Phone", "emailLabel": "Email", "badEmail": "Please enter a valid email",
       "plan": "What are you interested in?", "planOptions": ["Not sure yet", "Landing page", "Business site", "Premium site", "Just care for an existing site"],
       "message": "Tell us briefly about your business", "messagePh": "e.g. a barbershop in Haifa, no website yet, want online bookings",

@@ -81,6 +81,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
     <a class="logo" href="#top" aria-label="Altshuler">altshuler<b>.</b><small>${L.studio}</small></a>
     <nav class="nav" id="nav" aria-label="${L.menu}">
       ${L.nav.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}
+      <a class="nav__phone" href="tel:${C.phone.replace(/-/g, '')}" dir="ltr">${C.phone}</a>
       <a class="nav__lang" href="${L.otherPath}" lang="${L.otherPath.includes('en') ? 'en' : 'he'}" aria-label="${L.otherName}">${L.otherLabel}</a>
       <a class="btn btn--ink nav__cta" href="#contact">${L.navCta}</a>
     </nav>
@@ -102,7 +103,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
     </div>
     <ul class="facts up" style="--d:450ms">${hero.facts.map(f => `<li>${icon('check')}${f}</li>`).join('')}</ul>
     <div class="hero__media up" style="--d:200ms">
-      ${browser(shot('roti-desktop', [720, 1440], work.altDesktop, '(max-width: 1100px) 92vw, 1040px', true, P))}
+      <div class="sel"><i class="sel__c sel__c--1"></i><i class="sel__c sel__c--2"></i><i class="sel__c sel__c--3"></i><i class="sel__c sel__c--4"></i><span class="sel__tag" dir="ltr">rotisserie — 1440 × 900</span>${browser(shot('roti-desktop', [720, 1440], work.altDesktop, '(max-width: 1100px) 92vw, 1040px', true, P))}</div>
       ${phone(shot('roti-mobile', [390], work.altMobile, '200px', true, P))}
     </div>
   </div>
@@ -128,6 +129,11 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
         <a class="link" href="${C.rotisserieUrl}" target="_blank" rel="noopener">${work.link}${icon('external')}</a>
       </div>
     </article>
+    <h3 class="concepts__title rv">${work.conceptsTitle}</h3>
+    <div class="concepts">${work.concepts.map(([k, name, niche], i) => `<a class="concept rv" style="--d:${i * 80}ms" href="${P}concepts/${k}.html" target="_blank" rel="noopener">
+        <div class="concept__media">${browser(shot('concept-' + k, [720, 1440], name, '(max-width: 900px) 92vw, 400px', false, P))}${phone(shot('concept-' + k + '-mobile', [390], name, '90px', false, P))}</div>
+        <div class="concept__info"><span class="concept__tag">${work.conceptLabel}</span><strong>${name}</strong><span>${niche}</span><span class="concept__open">${work.conceptOpen}${icon('external')}</span></div>
+      </a>`).join('')}</div>
     <a class="next rv" href="#contact">
       <span class="next__plus">${icon('plus')}</span>
       <span><strong>${work.nextTitle}</strong><span>${work.nextText}</span></span>
@@ -220,6 +226,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
     <a href="#top">${L.footer.top} ↑</a>
   </div>
 </footer>
+<a class="wa" href="https://wa.me/${C.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.2-.3-.3-.5-.4Z"/></svg></a>
 <script src="${P}js/main.js?v=${JS_VER}" defer></script>
 </body>
 </html>

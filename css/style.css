@@ -296,3 +296,51 @@ html[dir=rtl] .form input[dir=ltr] { text-align: right; }
 .plan li.plan__plus { font-weight: 700; padding-bottom: 2px; }
 .form { position: relative; }
 .form .hp { position: absolute; inset-inline-start: 0; top: 0; width: 1px !important; height: 1px; min-height: 0; padding: 0; border: 0; opacity: 0; overflow: hidden; clip-path: inset(50%); pointer-events: none; }
+
+/* ================= тестовые идеи (11.10.2026): телефон, рамка-выделение, концепты, WhatsApp ================= */
+.nav .nav__phone { font-weight: 700; font-size: 15px; padding-inline: 10px; }
+
+/* рамка «выделения» как в редакторе дизайна вокруг главного скриншота */
+.sel { position: relative; max-width: 1040px; margin-inline: auto; }
+.sel::before { content: ''; position: absolute; inset: -12px; border: 1px solid var(--accent); pointer-events: none; opacity: 0; animation: selIn .6s 1s var(--ease) forwards; }
+.sel__c { position: absolute; width: 9px; height: 9px; background: var(--paper); border: 1.5px solid var(--accent); z-index: 2; opacity: 0; animation: selIn .4s 1.2s var(--ease) forwards; }
+.sel__c--1 { top: -16px; left: -16px; } .sel__c--2 { top: -16px; right: -16px; }
+.sel__c--3 { bottom: -16px; left: -16px; } .sel__c--4 { bottom: -16px; right: -16px; }
+.sel__tag { position: absolute; top: -40px; inset-inline-start: -12px; background: var(--accent); color: var(--accent-ink); font: 500 12px/1 ui-monospace, 'Consolas', monospace; padding: 6px 9px; border-radius: 3px; opacity: 0; animation: selIn .4s 1.35s var(--ease) forwards; }
+html[dir=rtl] .sel__tag { inset-inline-start: auto; left: -12px; }
+@keyframes selIn { to { opacity: 1; } }
+.hero__media .sel .browser, html[dir=rtl] .hero__media .sel .browser { max-width: none; transform: none; }
+
+/* концепты */
+.concepts__title { font-size: clamp(22px, 2.2vw, 28px); margin-top: clamp(56px, 7vw, 96px); letter-spacing: -.01em; }
+.concepts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+.concept { text-decoration: none; display: flex; flex-direction: column; gap: 18px; }
+.concept__media { position: relative; padding-bottom: 22px; padding-inline-end: 22px; }
+.concept__media .browser { border-radius: 10px; }
+.concept__media .browser__bar { height: 24px; gap: 5px; }
+.concept__media .browser__bar i { width: 7px; height: 7px; }
+.concept__media .phone { position: absolute; inset-inline-end: 0; bottom: 0; width: 24%; border-radius: 16px; padding: 4px; }
+.concept__media .phone img { border-radius: 12px; }
+.concept__media img { transition: transform .5s var(--ease); }
+.concept:hover .browser img { transform: scale(1.02); }
+.concept__info { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2px 12px; }
+.concept__info strong { font: 700 20px/1.2 var(--display); grid-column: 1; }
+.concept__info span:not(.concept__tag):not(.concept__open) { color: var(--muted); font-size: 15px; grid-column: 1; }
+.concept__tag { grid-column: 1; justify-self: start; font-size: 12px; font-weight: 700; color: var(--accent-ink); background: #FFD9C7; padding: 3px 8px; border-radius: 3px; margin-bottom: 4px; }
+.concept__open { grid-column: 2; grid-row: 1 / 4; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14px; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+
+/* плавающая кнопка WhatsApp */
+.wa { position: fixed; bottom: 22px; inset-inline-end: 22px; z-index: 60; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: grid; place-items: center; box-shadow: 0 12px 28px -8px rgba(18, 18, 18, .45); transition: transform .2s var(--ease); }
+html[dir=rtl] .wa { inset-inline-end: auto; left: 22px; }
+.wa:hover { transform: scale(1.06); }
+.wa svg { width: 30px; height: 30px; fill: #fff; }
+
+@media (max-width: 960px) {
+  .concepts { grid-template-columns: 1fr; max-width: 560px; }
+  .nav .nav__phone { font-size: 18px; }
+}
+@media (max-width: 640px) {
+  .sel::before { inset: -8px; } .sel__c { display: none; } .sel__tag { top: -30px; }
+  .wa { width: 52px; height: 52px; bottom: 16px; left: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .sel::before, .sel__c, .sel__tag { opacity: 1; } }

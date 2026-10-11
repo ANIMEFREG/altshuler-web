@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Altshuler — 3 направления</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;500;700;900&family=Heebo:wght@300;400;500;700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600&family=Bellefair&display=swap">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Heebo',sans-serif}
+img{display:block;max-width:100%}
+.tag{position:absolute;top:18px;left:18px;z-index:5;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:8px 12px;border-radius:999px;direction:ltr}
+section{position:relative;min-height:100vh;overflow:hidden}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.mono{font-family:'IBM Plex Mono',monospace;direction:ltr;unicode-bidi:isolate}
+
+/* ===== A — Editorial Dark ===== */
+.a{background:#0D0D0C;color:#ECE7DE}
+.a .tag{background:#ECE7DE;color:#0D0D0C}
+.a .top{display:flex;justify-content:space-between;align-items:center;height:84px;border-bottom:1px solid #2A2925}
+.a .logo{font:800 24px/1 'Heebo';letter-spacing:-.04em;direction:ltr}.a .logo b{color:#FF5A1F}
+.a nav{display:flex;gap:30px;font:400 14px 'IBM Plex Sans Hebrew';color:#A9A398}
+.a .meta{display:flex;justify-content:space-between;padding:26px 0;font:400 12px 'IBM Plex Mono';letter-spacing:.08em;color:#8C877D;border-bottom:1px solid #2A2925;direction:ltr}
+.a h1{font:900 clamp(56px,8.6vw,138px)/.95 'Frank Ruhl Libre',serif;letter-spacing:-.02em;margin-top:56px}
+.a h1 i{font-style:normal;font-weight:300;color:#FF5A1F}
+.a .row{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;margin-top:56px;align-items:end}
+.a .lead{font:300 21px/1.6 'IBM Plex Sans Hebrew';color:#C9C3B8;max-width:30em}
+.a .cta{display:flex;gap:14px;margin-top:30px}
+.a .btn{font:500 15px 'IBM Plex Sans Hebrew';padding:16px 26px;border:1px solid #ECE7DE;color:#ECE7DE;text-decoration:none}
+.a .btn.p{background:#ECE7DE;color:#0D0D0C}
+.a .shot{border:1px solid #2A2925;padding:10px;background:#141412}
+.a .shot figcaption{display:flex;justify-content:space-between;font:400 11px 'IBM Plex Mono';color:#8C877D;padding:10px 2px 0;direction:ltr}
+.a .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #2A2925;margin-top:64px}
+.a .stats div{padding:26px 0 40px;border-left:1px solid #2A2925;padding-right:24px}
+.a .stats div:last-child{border-left:0}
+.a .stats b{display:block;font:300 48px/1 'Frank Ruhl Libre';direction:ltr;text-align:right}
+.a .stats span{font:400 12px 'IBM Plex Mono';color:#8C877D;letter-spacing:.06em}
+
+/* ===== B — Swiss Grid ===== */
+.b{background:#F2F2EF;color:#0B0B0B;background-image:linear-gradient(to left,rgba(11,11,11,.07) 1px,transparent 1px);background-size:calc((100% - 80px)/12) 100%;background-position:40px 0}
+.b .tag{background:#1F3BFF;color:#fff}
+.b .top{display:grid;grid-template-columns:repeat(12,1fr);align-items:center;height:76px;border-bottom:2px solid #0B0B0B}
+.b .logo{grid-column:span 3;font:900 22px 'Heebo';letter-spacing:-.05em;direction:ltr;text-align:right}.b .logo b{color:#1F3BFF}
+.b nav{grid-column:span 7;display:flex;gap:26px;font:500 14px 'Heebo'}
+.b .navcta{grid-column:span 2;justify-self:end;font:700 13px 'Heebo';background:#0B0B0B;color:#fff;padding:12px 18px;text-decoration:none}
+.b .idx{display:grid;grid-template-columns:repeat(12,1fr);padding:22px 0;font:500 12px 'IBM Plex Mono';letter-spacing:.06em}
+.b .idx span:nth-child(1){grid-column:1/4}.b .idx span:nth-child(2){grid-column:4/9}.b .idx span:nth-child(3){grid-column:9/13;text-align:left;direction:ltr}
+.b h1{font:900 clamp(64px,11vw,190px)/.86 'Heebo';letter-spacing:-.055em;margin-top:18px}
+.b h1 em{font-style:normal;color:#1F3BFF}
+.b .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:0 0;margin-top:46px;border-top:2px solid #0B0B0B}
+.b .lead{grid-column:1/5;font:400 19px/1.55 'Heebo';padding:26px 0 0 24px}
+.b .cta{grid-column:5/8;padding:26px 24px 0;display:flex;flex-direction:column;gap:10px}
+.b .btn{font:700 15px 'Heebo';padding:16px 20px;background:#1F3BFF;color:#fff;text-decoration:none;display:flex;justify-content:space-between}
+.b .btn.s{background:transparent;color:#0B0B0B;border:2px solid #0B0B0B}
+.b .shot{grid-column:8/13;padding-top:26px}
+.b .shot img{border:2px solid #0B0B0B}
+.b .cap{font:500 11px 'IBM Plex Mono';margin-top:8px;direction:ltr;text-align:left}
+
+/* ===== C — Warm Luxury ===== */
+.c{background:#14261F;color:#EFE6D2}
+.c .tag{background:#C8A45C;color:#14261F}
+.c .top{display:flex;justify-content:space-between;align-items:center;height:96px}
+.c .logo{font:400 30px 'Bellefair',serif;letter-spacing:.12em;direction:ltr;text-transform:uppercase}
+.c .logo small{display:block;font:400 10px 'IBM Plex Mono';letter-spacing:.3em;color:#C8A45C;margin-top:4px}
+.c nav{display:flex;gap:34px;font:300 15px 'IBM Plex Sans Hebrew';color:#CFC4AC}
+.c .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center;margin-top:40px}
+.c .eyebrow{display:flex;align-items:center;gap:14px;font:400 12px 'IBM Plex Mono';letter-spacing:.2em;color:#C8A45C;direction:ltr;justify-content:flex-end}
+.c .eyebrow::after{content:'';width:60px;height:1px;background:#C8A45C}
+.c h1{font:400 clamp(52px,6.6vw,104px)/1.02 'Bellefair','Frank Ruhl Libre',serif;margin-top:26px}
+.c h1 span{color:#C8A45C}
+.c .lead{font:300 19px/1.75 'IBM Plex Sans Hebrew';color:#CFC4AC;margin-top:28px;max-width:30em}
+.c .cta{display:flex;gap:22px;align-items:center;margin-top:40px}
+.c .btn{font:500 14px 'IBM Plex Sans Hebrew';letter-spacing:.04em;padding:18px 30px;background:#C8A45C;color:#14261F;text-decoration:none}
+.c .link{color:#EFE6D2;font:400 14px 'IBM Plex Sans Hebrew';border-bottom:1px solid #C8A45C;padding-bottom:4px;text-decoration:none}
+.c .frame{position:relative;padding:18px;border:1px solid rgba(200,164,92,.45)}
+.c .frame img{filter:saturate(.95)}
+.c .frame .ph{position:absolute;bottom:-34px;left:-26px;width:26%;border:6px solid #14261F;outline:1px solid rgba(200,164,92,.45)}
+.c .foot{display:flex;gap:56px;margin-top:70px;padding-top:26px;border-top:1px solid rgba(200,164,92,.3)}
+.c .foot div{font:300 14px 'IBM Plex Sans Hebrew';color:#CFC4AC}
+.c .foot b{display:block;font:400 34px 'Bellefair';color:#EFE6D2;direction:ltr;text-align:right}
+@media(max-width:900px){.a .row,.c .grid{grid-template-columns:1fr}.b .lead,.b .cta,.b .shot{grid-column:1/-1}nav{display:none!important}}
+</style>
+</head>
+<body>
+
+<section class="a" id="A">
+  <span class="tag">A · EDITORIAL DARK</span>
+  <div class="wrap">
+    <div class="top"><span class="logo">altshuler<b>.</b></span><nav><span>עבודות</span><span>שירותים</span><span>תהליך</span><span>מחירים</span><span>צור קשר</span></nav></div>
+    <div class="meta"><span>WEB DESIGN STUDIO — ISRAEL</span><span>EST. 2026</span><span>HE / EN</span></div>
+    <h1>אתרים שעובדים<br><i>כמו</i> העסק שלכם.</h1>
+    <div class="row">
+      <div>
+        <p class="lead">עיצוב ובניית אתרים לעסקים מכל הגדלים — מעסק שרק נפתח ועד רשת עם כמה סניפים. מהירים, ברורים, ובנויים להביא לקוחות.</p>
+        <div class="cta"><a class="btn p" href="#">לקבלת הצעה</a><a class="btn" href="#">לעבודות שלנו</a></div>
+      </div>
+      <figure class="shot"><img src="roti-desktop-1440.webp" alt=""><figcaption><span>01 — ROTISSERIE CHICKEN CLUB</span><span>2026</span></figcaption></figure>
+    </div>
+    <div class="stats"><div><b>1.1s</b><span>LOAD TIME</span></div><div><b>100</b><span>ACCESSIBILITY</span></div><div><b>HE·EN</b><span>LANGUAGES</span></div></div>
+  </div>
+</section>
+
+<section class="b" id="B">
+  <span class="tag">B · SWISS GRID</span>
+  <div class="wrap">
+    <div class="top"><span class="logo">altshuler<b>.</b></span><nav><span>עבודות</span><span>שירותים</span><span>תהליך</span><span>מחירים</span></nav><a class="navcta" href="#">בואו נדבר</a></div>
+    <div class="idx"><span>(01) סטודיו לעיצוב אתרים</span><span>עסקים קטנים, בינוניים ורשתות</span><span>altshuler.co.il — 2026</span></div>
+    <h1>אתר<br>שמביא <em>לקוחות.</em></h1>
+    <div class="grid">
+      <p class="lead">אנחנו מעצבים ובונים אתרים מהירים וברורים לעסקים מכל הגדלים. כל מי שנכנס מבין מיד מה אתם מציעים ואיך להגיע אליכם.</p>
+      <div class="cta"><a class="btn" href="#"><span>לקבלת הצעה</span><span>←</span></a><a class="btn s" href="#"><span>לעבודות שלנו</span><span>←</span></a></div>
+      <div class="shot"><img src="roti-desktop-1440.webp" alt=""><p class="cap">FIG. 01 — ROTISSERIE CHICKEN CLUB / REDESIGN</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="c" id="C">
+  <span class="tag">C · WARM LUXURY</span>
+  <div class="wrap">
+    <div class="top"><span class="logo">Altshuler<small>WEB DESIGN STUDIO</small></span><nav><span>עבודות</span><span>שירותים</span><span>תהליך</span><span>מחירים</span><span>צור קשר</span></nav></div>
+    <div class="grid">
+      <div>
+        <p class="eyebrow">EST. 2026 · ISRAEL</p>
+        <h1>אתר שמספר<br>את הסיפור <span>שלכם</span>.</h1>
+        <p class="lead">עיצוב ובניית אתרים לעסקים שמקפידים על הפרטים — מהעסק שרק נפתח ועד רשת עם כמה סניפים. גישה אישית, ביצוע מדויק.</p>
+        <div class="cta"><a class="btn" href="#">לתיאום שיחה</a><a class="link" href="#">לעבודות שלנו</a></div>
+      </div>
+      <div class="frame"><img src="roti-desktop-1440.webp" alt=""><img class="ph" src="roti-mobile-390.webp" alt=""></div>
+    </div>
+    <div class="foot"><div><b>1.1s</b>זמן טעינה</div><div><b>100/100</b>נגישות</div><div><b>2</b>שפות</div></div>
+  </div>
+</section>
+
+</body>
+</html>
