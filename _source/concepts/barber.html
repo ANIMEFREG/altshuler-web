@@ -6,253 +6,309 @@
 <title>BARBER 17 — מספרת גברים, ראשון לציון | קונספט</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=Heebo:wght@300;400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Heebo:wght@300;400;500;600;700;800&display=swap">
 <style>
-:root{--bg:#0E0E0E;--bg2:#161616;--fg:#EDE8E0;--mut:#8D8780;--line:#ffffff1c;--red:#E0452C;--k:'Karantina',sans-serif;--stage:44vw}
+:root{--bg:#0D0D0D;--bg2:#141414;--bg3:#1B1B1B;--fg:#EEEAE3;--fg2:#BDB7AE;--mut:#7F7a73;--line:#ffffff14;--line2:#ffffff26;--red:#D9442B;--k:'Karantina',sans-serif;--stage:42vw;--pad:clamp(24px,4.4vw,72px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font:400 17px/1.6 'Heebo',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{background:var(--bg);color:var(--fg);font:400 16.5px/1.65 'Heebo',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;font-weight:700;font-size:16px;border:1.5px solid var(--fg);transition:background .2s,color .2s,border-color .2s}
-.btn:hover{background:var(--fg);color:var(--bg)}
-.btn-red{background:var(--red);border-color:var(--red);color:#fff}.btn-red:hover{background:#fff;border-color:#fff;color:var(--bg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:2px;font-weight:600;font-size:15.5px;border:1px solid var(--line2);transition:background .2s,color .2s,border-color .2s}
+.btn:hover{border-color:var(--fg)}
+.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
+.btn-red{background:var(--red);border-color:var(--red);color:#fff}.btn-red:hover{background:#c23a23;border-color:#c23a23}
+.ey{display:flex;align-items:center;gap:12px;font-weight:600;font-size:13px;letter-spacing:.08em;color:var(--mut)}
+.ey b{color:var(--red);font-weight:700}
+.ey::after{content:'';flex:0 0 40px;height:1px;background:var(--line2)}
+h2{font:700 clamp(54px,5.4vw,84px)/.88 var(--k);letter-spacing:.005em;margin-top:18px}
+.lead{font-size:17.5px;font-weight:300;color:var(--fg2);max-width:31em;margin-top:18px}
 
-/* неподвижная сцена с фото — слева */
+/* сцена с фото — неподвижная, слева */
 .stage{position:fixed;top:0;bottom:0;left:0;width:var(--stage);overflow:hidden;background:#000;z-index:1}
-.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .8s,transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity .9s,transform 1.8s cubic-bezier(.2,.7,.2,1)}
 .stage img.on{opacity:1;transform:scale(1)}
-.stage::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#000c,#0000 40%),linear-gradient(90deg,#0000 80%,#0e0e0e66)}
-.cap{position:absolute;inset:auto 32px 30px 32px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
-.cap b{font:700 clamp(90px,10vw,150px)/.75 var(--k);color:var(--fg)}
-.cap b small{font-size:.32em;color:var(--mut);margin-inline-start:6px}
-.cap span{font-weight:500;font-size:14.5px;color:#ffffffc0;max-width:17em;text-align:left}
-.prog{position:absolute;top:32px;left:32px;right:32px;z-index:2;display:flex;gap:6px}
-.prog i{flex:1;height:2px;background:#ffffff40;transition:background .4s}
-.prog i.on{background:var(--red)}
+.stage::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#000a,#0000 32%)}
+.cap{position:absolute;inset:auto 36px 32px 36px;z-index:2;display:flex;align-items:center;gap:16px;font-size:13.5px;color:#ffffffcc}
+.cap b{font-weight:600;font-variant-numeric:tabular-nums}
+.cap i{flex:1;height:1px;background:#ffffff40;position:relative;overflow:hidden}
+.cap i::after{content:'';position:absolute;inset:0;width:var(--p,20%);background:#fff;transition:width .6s}
+.cap span{white-space:nowrap}
 
-/* правая колонка с контентом */
-main,.bar,footer{margin-inline-end:var(--stage)}
-.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;height:76px;padding:0 clamp(24px,4vw,64px);background:#0e0e0ee6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.logo{font:700 34px/1 var(--k);letter-spacing:.02em}
+/* колонка с контентом */
+main,.bar,footer.ft{margin-inline-end:var(--stage)}
+.bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:28px;height:78px;padding:0 var(--pad);background:#0d0d0deb;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font:700 32px/1 var(--k);letter-spacing:.03em}
 .logo i{color:var(--red);font-style:normal}
-.bar nav{display:flex;gap:24px;font-weight:500;font-size:15px;color:var(--mut)}
-.bar nav a.on,.bar nav a:hover{color:var(--fg)}
-.bar .btn{min-height:42px;padding:0 18px;font-size:14.5px}
-.sc{min-height:100vh;padding:clamp(70px,9vh,110px) clamp(24px,4vw,64px);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
-.no{font:700 16px/1 'Heebo';color:var(--red);letter-spacing:.06em;margin-bottom:20px}
-.sc h2{font:700 clamp(64px,7.4vw,118px)/.84 var(--k)}
-.sc .lead{font-size:19px;font-weight:300;color:#c9c3ba;max-width:30em;margin-top:22px}
+.bar nav{display:flex;gap:26px;font-size:14.5px;color:var(--mut)}
+.bar nav a{transition:color .2s}.bar nav a.on,.bar nav a:hover{color:var(--fg)}
+.bar .tel{margin-inline-start:auto;font-weight:600;font-size:14.5px;color:var(--fg2)}
+.bar .btn{min-height:42px;padding:0 18px;font-size:14px}
+.sc{padding:clamp(88px,12vh,140px) var(--pad);border-bottom:1px solid var(--line)}
 .mimg{display:none}
 
 /* 01 hero */
-#hero{min-height:calc(100vh - 76px)}
-#hero h1{font:700 clamp(96px,11vw,190px)/.8 var(--k)}
+#hero{min-height:calc(100vh - 78px);display:flex;flex-direction:column;justify-content:center;padding-top:60px;padding-bottom:60px}
+#hero h1{font:700 clamp(84px,8.6vw,146px)/.84 var(--k);margin-top:26px}
 #hero h1 em{font-style:normal;color:var(--red)}
+#hero .lead{font-size:19px;margin-top:26px}
 #hero .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
-.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:56px;border-top:1px solid var(--line)}
-.facts div{padding:18px 0;padding-inline-end:36px;margin-inline-end:36px;border-inline-end:1px solid var(--line)}
-.facts div:last-child{border:0;margin:0;padding-inline-end:0}
-.facts b{display:block;font:800 30px/1.1 'Heebo';letter-spacing:-.02em;margin-bottom:4px}
-.facts span{font-size:14px;color:var(--mut)}
+.trust{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+.trust div{display:flex;align-items:center;gap:10px}
+.trust b{font-weight:700;font-size:17px;color:var(--fg)}
+.stars{color:#E9B949;letter-spacing:1px;font-size:13px}
 
 /* 02 прайс */
-.prices{margin-top:44px;border-top:1px solid var(--line)}
-.pr{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 24px;padding:20px 0;border-bottom:1px solid var(--line);transition:padding .3s}
-.pr:hover{padding-inline-start:14px}
-.pr h3{font:700 44px/.9 var(--k)}
-.pr p{grid-column:1;font-size:14.5px;color:var(--mut)}
-.pr b{grid-row:1/3;grid-column:2;font:800 30px/1 'Heebo';letter-spacing:-.02em}
-.pr b small{font-size:.6em;font-weight:500;color:var(--mut);margin-inline-start:4px}
-.pr:hover h3{color:var(--red)}
+.pgrp{margin-top:48px}
+.pgrp h3{font-weight:600;font-size:13px;letter-spacing:.08em;color:var(--mut);padding-bottom:12px;border-bottom:1px solid var(--line2)}
+.pgrp+.pgrp{margin-top:36px}
+.pr{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:4px 28px;padding:18px 0;border-bottom:1px solid var(--line);cursor:default}
+.pr h4{font-weight:600;font-size:19px;transition:color .2s}
+.pr p{grid-column:1;font-size:14px;color:var(--mut)}
+.pr .t{grid-row:1/3;grid-column:2;font-size:13.5px;color:var(--mut);white-space:nowrap}
+.pr b{grid-row:1/3;grid-column:3;font-weight:700;font-size:21px;min-width:3.6em;text-align:left}
+.pr:hover h4{color:var(--red)}
+.pnote{font-size:14px;color:var(--mut);margin-top:22px}
 
-/* 03 работы — список, наведение меняет фото */
-.works{margin-top:40px;counter-reset:w}
-.wk{display:flex;align-items:baseline;gap:22px;padding:14px 0;border-bottom:1px solid var(--line);cursor:pointer;color:#ffffff55;transition:color .3s}
-.wk::before{counter-increment:w;content:counter(w,decimal-leading-zero);font:500 14px/1 'Heebo';color:var(--mut);min-width:2em}
-.wk h3{font:700 clamp(54px,5.6vw,84px)/.9 var(--k);transition:transform .35s}
-.wk span{margin-inline-start:auto;font-size:14px;color:var(--mut);opacity:0;transition:opacity .3s}
-.wk.on{color:var(--fg)}.wk.on h3{transform:translateX(-14px)}.wk.on span{opacity:1}
-.hint{font-size:14px;color:var(--mut);margin-top:18px}
+/* 03 работы — галерея */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px}
+.gal figure{position:relative;overflow:hidden;background:var(--bg2);cursor:pointer}
+.gal figure:first-child{grid-column:1/-1}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s;filter:grayscale(.25)}
+.gal figure:first-child img{aspect-ratio:16/10}
+.gal figure:hover img{transform:scale(1.04);filter:none}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:40px 18px 16px;background:linear-gradient(0deg,#000c,#0000);display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.gal figcaption b{font-weight:600;font-size:16px}
+.gal figcaption span{font-size:13px;color:#ffffffaa}
 
-/* 04 место */
-.big4{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border-top:1px solid var(--line)}
-.big4 div{padding:24px 0 24px;border-bottom:1px solid var(--line)}
-.big4 div:nth-child(odd){padding-inline-end:28px;border-inline-end:1px solid var(--line)}
-.big4 div:nth-child(even){padding-inline-start:28px}
-.big4 b{display:block;font:700 40px/1 var(--k);margin-bottom:6px}
-.big4 span{font-size:15px;color:var(--mut)}
+/* 04 отзывы */
+.revs{display:grid;gap:14px;margin-top:40px}
+.rev{background:var(--bg2);border:1px solid var(--line);padding:26px 26px 22px}
+.rev p{font-size:17px;line-height:1.6;color:var(--fg)}
+.who{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:14px;color:var(--mut)}
+.who i{width:36px;height:36px;border-radius:50%;background:var(--bg3);display:grid;place-items:center;font-style:normal;font-weight:700;color:var(--fg2)}
+.who b{color:var(--fg);font-weight:600;display:block;line-height:1.2}
+.rsum{display:flex;align-items:center;gap:18px;margin-top:26px}
+.rsum strong{font-weight:800;font-size:44px;line-height:1}
+.rsum span{font-size:14px;color:var(--mut)}.rsum .stars{color:#E9B949;font-size:15px}
 
-/* 05 запись — виджет */
-.bk{margin-top:40px;display:grid;gap:26px}
-.bk h4{font-weight:500;font-size:14px;color:var(--mut);margin-bottom:10px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips button{min-height:46px;padding:0 18px;border:1.5px solid var(--line);font-weight:500;font-size:15px;transition:border-color .2s,background .2s}
-.chips button:hover{border-color:#ffffff66}
-.chips button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.chips button[disabled]{opacity:.3;text-decoration:line-through;cursor:default}
-.sum{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--bg2);border:1px solid var(--line);padding:20px 22px}
-.sum p{font-size:16px}.sum p b{color:var(--red)}
-.info{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);font-size:15px}
-.info h4{font:700 30px/1 var(--k);margin-bottom:10px}
-.info div div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;color:#c9c3ba}
-.info p{color:#c9c3ba}
-footer{padding:28px clamp(24px,4vw,64px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mut)}
+/* 05 место */
+.space4{display:grid;grid-template-columns:1fr 1fr;margin-top:44px;border-top:1px solid var(--line)}
+.space4 div{padding:22px 0;border-bottom:1px solid var(--line)}
+.space4 div:nth-child(odd){padding-inline-end:24px;border-inline-end:1px solid var(--line)}
+.space4 div:nth-child(even){padding-inline-start:24px}
+.space4 b{display:block;font-weight:600;font-size:17px;margin-bottom:4px}
+.space4 span{font-size:14.5px;color:var(--mut)}
 
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+/* 06 запись */
+.book{margin-top:44px;background:var(--bg2);border:1px solid var(--line)}
+.step{padding:24px 26px;border-bottom:1px solid var(--line)}
+.step h4{display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;margin-bottom:14px}
+.step h4 i{width:24px;height:24px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font-style:normal;font-size:12.5px;color:var(--fg2)}
+.svc{display:grid;gap:6px}
+.svc label{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--line);cursor:pointer;transition:border-color .2s,background .2s}
+.svc label:hover{border-color:var(--line2)}
+.svc input{appearance:none;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--mut);flex:none;display:grid;place-items:center;margin:0}
+.svc input:checked{border-color:var(--red)}
+.svc input:checked::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--red)}
+.svc label:has(input:checked){border-color:#d9442b88;background:#d9442b0d}
+.svc label span{flex:1;font-weight:500}
+.svc label small{color:var(--mut);font-size:13.5px}
+.svc label b{font-weight:700;min-width:3.4em;text-align:left}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.days button{padding:12px 6px;border:1px solid var(--line);text-align:center;transition:border-color .2s,background .2s}
+.days button small{display:block;font-size:12.5px;color:var(--mut)}
+.days button b{display:block;font-weight:700;font-size:18px;line-height:1.3}
+.days button:hover{border-color:var(--line2)}
+.days button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}.days button.on small{color:#0009}
+.slots{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.slots button{min-height:42px;border:1px solid var(--line);font-weight:500;font-size:14.5px;font-variant-numeric:tabular-nums;transition:border-color .2s,background .2s}
+.slots button:hover{border-color:var(--line2)}
+.slots button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.slots .none{grid-column:1/-1;font-size:14px;color:var(--mut)}
+.sum{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 26px}
+.sum p{font-size:15px;color:var(--fg2)}.sum p b{color:var(--fg);font-weight:600}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;font-size:15px}
+.info h4{font-weight:600;font-size:13px;letter-spacing:.08em;color:var(--mut);margin-bottom:12px}
+.info .r{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);color:var(--fg2)}
+.info p{color:var(--fg2);line-height:1.9}
+footer.ft{padding:36px var(--pad);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mut)}
+footer.ft .logo{font-size:26px;color:var(--fg)}
+footer.ft nav{display:flex;gap:22px}
 
-@media (max-width:1100px){.bar nav{display:none}}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+
+@media (max-width:1180px){.bar nav{display:none}}
 @media (max-width:900px){
+  :root{--pad:18px}
   .stage{display:none}
-  main,.bar,footer{margin:0}
-  .sc{min-height:auto;padding:64px 18px}
+  main,.bar,footer.ft{margin:0}
+  .bar{height:64px}.bar .tel{display:none}.bar .btn{margin-inline-start:auto}
+  .sc{padding:72px var(--pad)}
   #hero{min-height:auto;padding-top:0}
-  .mimg{display:block;max-width:none;width:calc(100% + 36px);margin:0 -18px 36px;aspect-ratio:4/3;object-fit:cover}
-  #hero .mimg{aspect-ratio:4/5;margin-bottom:-120px;mask:linear-gradient(#000 55%,#0000)}
-  #hero h1{position:relative}
-  .bar{padding:0 18px;height:64px}
-  .facts{grid-template-columns:repeat(3,1fr)}
-  .facts div{padding-inline-end:12px;margin-inline-end:12px}
-  .facts b{font-size:22px}
-  .wk h3{font-size:52px}
-  .wk span{display:none}
-  .big4{grid-template-columns:1fr}
-  .big4 div{padding:20px 0!important;border-inline-end:0!important}
+  .mimg{display:block;max-width:none;width:calc(100% + 36px);margin:0 -18px 34px;aspect-ratio:4/3;object-fit:cover}
+  #hero .mimg{aspect-ratio:4/5;margin-bottom:-140px;-webkit-mask:linear-gradient(#000 50%,#0000);mask:linear-gradient(#000 50%,#0000)}
+  #hero .ey,#hero h1{position:relative}
+  .gal{gap:8px}.gal figcaption{padding:30px 12px 10px}.gal figcaption span{display:none}.gal figcaption b{font-size:14.5px}
+  .pr{grid-template-columns:1fr auto;gap:2px 16px}.pr .t{display:none}.pr b{grid-column:2}
+  .space4{grid-template-columns:1fr}.space4 div{padding:18px 0!important;border-inline-end:0!important}
+  .days{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.days button b{font-size:16px}
+  .slots{grid-template-columns:repeat(4,1fr)}
+  .step,.sum{padding:20px 16px}
   .info{grid-template-columns:1fr}
-  .pr h3{font-size:38px}.pr b{font-size:24px}
 }
 </style>
 </head>
 <body>
 
 <aside class="stage" aria-hidden="true">
-  <div class="prog"><i class="on"></i><i></i><i></i><i></i><i></i></div>
   <img src="barber-img/hero.jpg" data-k="hero" class="on" alt="">
-  <img src="barber-img/portrait.jpg" data-k="prices" alt="">
+  <img src="barber-img/portrait.jpg" data-k="portrait" alt="">
   <img src="barber-img/fade.jpg" data-k="fade" alt="">
   <img src="barber-img/design.jpg" data-k="design" alt="">
   <img src="barber-img/beard.jpg" data-k="beard" alt="">
   <img src="barber-img/shave.jpg" data-k="shave" alt="">
-  <img src="barber-img/portrait.jpg" data-k="portrait" alt="">
   <img src="barber-img/interior.jpg" data-k="space" alt="">
-  <img src="barber-img/tools.jpg" data-k="book" alt="">
-  <div class="cap"><b id="capN">01<small>/05</small></b><span id="capT">הרצל 17, ראשון לציון</span></div>
+  <img src="barber-img/tools.jpg" data-k="tools" alt="">
+  <div class="cap"><b id="capN" dir="ltr">01 / 06</b><i id="capP"></i><span id="capT">הרצל 17, ראשון לציון</span></div>
 </aside>
 
 <header class="bar">
   <a class="logo" href="#hero">BARBER <i>17</i></a>
-  <nav><a href="#prices">מחירון</a><a href="#work">עבודות</a><a href="#space">המקום</a><a href="#book">תור והגעה</a></nav>
+  <nav><a href="#prices">מחירון</a><a href="#work">עבודות</a><a href="#reviews">ביקורות</a><a href="#space">המקום</a><a href="#book">תור</a></nav>
+  <a class="tel" href="tel:0500000000" dir="ltr">050-000-0000</a>
   <a class="btn btn-red" href="#book">לקביעת תור</a>
 </header>
 
 <main>
   <section class="sc" id="hero" data-k="hero" data-t="הרצל 17, ראשון לציון">
     <img class="mimg" src="barber-img/hero.jpg" alt="ספר בעבודה">
-    <div class="no">01 — מספרת גברים</div>
-    <h1>תספורת חדה.<br><em>בלי לחכות</em><br>בתור.</h1>
-    <p class="lead">ספרים ותיקים, קפה על הבר ותור שנקבע אונליין בשתי לחיצות. מגיעים בזמן — יושבים מיד.</p>
-    <div class="cta"><a class="btn btn-red" href="#book">לקביעת תור</a><a class="btn" href="#prices">למחירון</a></div>
-    <div class="facts">
-      <div><b><bdi dir="ltr">09–21</bdi></b><span>א׳–ה׳, ו׳ עד 14:00</span></div>
-      <div><b>70 ₪</b><span>תספורת גבר</span></div>
-      <div><b>4.9★</b><span>412 ביקורות בגוגל</span></div>
+    <div class="ey"><b>BARBER 17</b> מספרת גברים · ראשון לציון</div>
+    <h1>תספורת חדה.<br><em>בלי לחכות</em> בתור.</h1>
+    <p class="lead">ספרים ותיקים, קפה על הבר ותור שנקבע אונליין בחצי דקה. מגיעים בזמן — יושבים מיד.</p>
+    <div class="cta"><a class="btn btn-red" href="#book">לקביעת תור<svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a><a class="btn" href="#prices">למחירון</a></div>
+    <div class="trust">
+      <div><span class="stars">★★★★★</span><b>4.9</b>412 ביקורות בגוגל</div>
+      <div><b>מאז 2014</b>באותה כתובת</div>
+      <div><b>4</b>ספרים במשמרת</div>
     </div>
   </section>
 
-  <section class="sc" id="prices" data-k="prices" data-t="כל המחירים כוללים שטיפה, עיצוב וכוס קפה">
+  <section class="sc" id="prices" data-k="portrait" data-t="כל המחירים כוללים שטיפה ועיצוב">
     <img class="mimg" src="barber-img/tools.jpg" alt="כלי עבודה של ספר" loading="lazy" style="aspect-ratio:16/9">
-    <div class="no">02 — מחירון</div>
-    <h2 class="rv">בלי הפתעות<br>בקופה.</h2>
+    <div class="ey rv"><b>02</b> מחירון</div>
+    <h2 class="rv">בלי הפתעות בקופה.</h2>
     <p class="lead rv">כל המחירים כוללים שטיפה, עיצוב עם מוצר מקצועי וכוס קפה או בירה קרה מהבר.</p>
-    <div class="prices rv">
-      <div class="pr" data-k="portrait"><h3>תספורת גבר</h3><p>מספריים או מכונה, כולל שטיפה ועיצוב · 30 דק׳</p><b>70<small>₪</small></b></div>
-      <div class="pr" data-k="beard"><h3>תספורת + זקן</h3><p>הקומבו הכי מוזמן אצלנו · 45 דק׳</p><b>90<small>₪</small></b></div>
-      <div class="pr" data-k="fade"><h3>פייד מדויק</h3><p>סקין פייד או לואו פייד, עבודה עם תער · 40 דק׳</p><b>80<small>₪</small></b></div>
-      <div class="pr" data-k="beard"><h3>עיצוב זקן</h3><p>קווים חדים, מגבת חמה ושמן זקן · 20 דק׳</p><b>45<small>₪</small></b></div>
-      <div class="pr" data-k="shave"><h3>גילוח בתער חם</h3><p>הגילוח הקלאסי, עם קצף חם ומגבות · 30 דק׳</p><b>60<small>₪</small></b></div>
-      <div class="pr" data-k="design"><h3>תספורת ילד</h3><p>עד גיל 12 · 25 דק׳</p><b>55<small>₪</small></b></div>
+    <div class="pgrp rv">
+      <h3>שיער</h3>
+      <div class="pr" data-k="portrait"><h4>תספורת גבר</h4><p>מספריים או מכונה, כולל שטיפה ועיצוב</p><span class="t">30 דק׳</span><b>70 ₪</b></div>
+      <div class="pr" data-k="fade"><h4>פייד מדויק</h4><p>סקין פייד או לואו פייד, גימור בתער</p><span class="t">40 דק׳</span><b>80 ₪</b></div>
+      <div class="pr" data-k="design"><h4>תספורת ילד</h4><p>עד גיל 12</p><span class="t">25 דק׳</span><b>55 ₪</b></div>
     </div>
+    <div class="pgrp rv">
+      <h3>זקן וגילוח</h3>
+      <div class="pr" data-k="beard"><h4>תספורת + זקן</h4><p>הקומבו הכי מוזמן אצלנו</p><span class="t">45 דק׳</span><b>90 ₪</b></div>
+      <div class="pr" data-k="beard"><h4>עיצוב זקן</h4><p>קווים חדים, מגבת חמה ושמן זקן</p><span class="t">20 דק׳</span><b>45 ₪</b></div>
+      <div class="pr" data-k="shave"><h4>גילוח בתער חם</h4><p>הגילוח הקלאסי, עם קצף חם ומגבות</p><span class="t">30 דק׳</span><b>60 ₪</b></div>
+    </div>
+    <p class="pnote rv">תשלום במזומן, אשראי, ביט או פייבוקס.</p>
   </section>
 
   <section class="sc" id="work" data-k="fade" data-t="פייד קלאסי · 40 דק׳">
-    <div class="no">03 — עבודות</div>
-    <h2 class="rv">מהכיסא<br>שלנו.</h2>
+    <div class="ey rv"><b>03</b> עבודות</div>
+    <h2 class="rv">מהכיסא שלנו.</h2>
     <p class="lead rv">כל תספורת מתחילה בשיחה קצרה: מה עובד לך, מה לא, ואיך זה ייראה גם אחרי שבועיים.</p>
-    <img class="mimg" id="wimg" src="barber-img/fade.jpg" alt="עבודה מהמספרה" loading="lazy" style="margin-top:28px;margin-bottom:0">
-    <div class="works rv">
-      <div class="wk on" data-k="fade" data-t="פייד קלאסי · 40 דק׳"><h3>פייד קלאסי</h3><span>40 דק׳ · 80 ₪</span></div>
-      <div class="wk" data-k="design" data-t="פייד + עיצוב · 45 דק׳"><h3>פייד + עיצוב</h3><span>45 דק׳ · 90 ₪</span></div>
-      <div class="wk" data-k="portrait" data-t="תספורת + זקן · 45 דק׳"><h3>תספורת + זקן</h3><span>45 דק׳ · 90 ₪</span></div>
-      <div class="wk" data-k="beard" data-t="עיצוב זקן · 20 דק׳"><h3>עיצוב זקן</h3><span>20 דק׳ · 45 ₪</span></div>
-      <div class="wk" data-k="shave" data-t="גילוח בתער חם · 30 דק׳"><h3>גילוח בתער</h3><span>30 דק׳ · 60 ₪</span></div>
+    <div class="gal rv">
+      <figure data-k="fade" data-t="פייד קלאסי · 40 דק׳"><img src="barber-img/fade.jpg" alt="פייד קלאסי" loading="lazy"><figcaption><b>פייד קלאסי</b><span>40 דק׳ · 80 ₪</span></figcaption></figure>
+      <figure data-k="design" data-t="פייד + עיצוב · 45 דק׳"><img src="barber-img/design.jpg" alt="פייד עם עיצוב" loading="lazy"><figcaption><b>פייד + עיצוב</b><span>45 דק׳</span></figcaption></figure>
+      <figure data-k="beard" data-t="עיצוב זקן · 20 דק׳"><img src="barber-img/beard.jpg" alt="עיצוב זקן" loading="lazy"><figcaption><b>עיצוב זקן</b><span>20 דק׳</span></figcaption></figure>
+      <figure data-k="portrait" data-t="תספורת + זקן · 45 דק׳"><img src="barber-img/portrait.jpg" alt="תספורת וזקן" loading="lazy"><figcaption><b>תספורת + זקן</b><span>45 דק׳</span></figcaption></figure>
+      <figure data-k="shave" data-t="גילוח בתער חם · 30 דק׳"><img src="barber-img/shave.jpg" alt="גילוח בתער" loading="lazy"><figcaption><b>גילוח בתער</b><span>30 דק׳</span></figcaption></figure>
     </div>
-    <p class="hint">העבירו את העכבר על הסגנון — התמונה מתחלפת.</p>
+  </section>
+
+  <section class="sc" id="reviews" data-k="beard" data-t="4.9 בגוגל · 412 ביקורות">
+    <div class="ey rv"><b>04</b> ביקורות</div>
+    <h2 class="rv">מה אומרים<br>אחרי הכיסא.</h2>
+    <div class="rsum rv"><strong>4.9</strong><div><span class="stars">★★★★★</span><br><span>412 ביקורות בגוגל</span></div></div>
+    <div class="revs">
+      <div class="rev rv"><p>„מגיע כבר שלוש שנים. קובע בערב, מגיע בזמן, יושב מיד. הפייד מחזיק שבועיים וחצי בלי בעיה.”</p><div class="who"><i>ד</i><div><b>דניאל כ.</b>לפני שבועיים · Google</div></div></div>
+      <div class="rev rv"><p>„לקחתי את הבן שלי לתספורת ראשונה במספרה. סבלנות של מלאך, והוא יצא מרוצה יותר ממני.”</p><div class="who"><i>ר</i><div><b>רועי מ.</b>לפני חודש · Google</div></div></div>
+      <div class="rev rv"><p>„גילוח בתער חם לפני החתונה — חוויה. מגבות חמות, בירה קרה, ושום לחץ.”</p><div class="who"><i>א</i><div><b>אלון ש.</b>לפני חודשיים · Google</div></div></div>
+    </div>
   </section>
 
   <section class="sc" id="space" data-k="space" data-t="ארבעה כיסאות, בר קפה ובירה קרה">
     <img class="mimg" src="barber-img/interior.jpg" alt="המספרה מבפנים" loading="lazy">
-    <div class="no">04 — המקום</div>
-    <h2 class="rv">לא רק תספורת.<br>חצי שעה<br>בשבילך.</h2>
+    <div class="ey rv"><b>05</b> המקום</div>
+    <h2 class="rv">לא רק תספורת.<br>חצי שעה בשבילך.</h2>
     <p class="lead rv">ארבעה כיסאות, מוזיקה טובה, קפה מהמכונה ובירה קרה במקרר. בלי מסכים מהבהבים ובלי לחץ — יושבים, מדברים, יוצאים חדים.</p>
-    <div class="big4 rv">
-      <div><b>0 דק׳</b><span>המתנה, כשמגיעים בשעה שנקבעה</span></div>
-      <div><b>על הבית</b><span>קפה מהמכונה או בירה קרה מהמקרר</span></div>
-      <div><b>4</b><span>ספרים ותיקים, כל אחד עם הסגנון שלו</span></div>
-      <div><b>Wi‑Fi</b><span>ושקעים, אם מחכים לחבר</span></div>
+    <div class="space4 rv">
+      <div><b>בלי המתנה</b><span>מגיעים בשעה שנקבעה ויושבים</span></div>
+      <div><b>קפה או בירה</b><span>על חשבון הבית, בכל ביקור</span></div>
+      <div><b>מוצרים מקצועיים</b><span>אפשר לקנות גם הביתה</span></div>
+      <div><b>Wi‑Fi ושקעים</b><span>אם מחכים לחבר</span></div>
     </div>
   </section>
 
-  <section class="sc" id="book" data-k="book" data-t="תזכורת בוואטסאפ שעה לפני התור">
-    <img class="mimg" src="barber-img/shave.jpg" alt="גילוח בתער" loading="lazy">
-    <div class="no">05 — תור</div>
+  <section class="sc" id="book" data-k="tools" data-t="תזכורת בוואטסאפ שעה לפני התור">
+    <div class="ey rv"><b>06</b> קביעת תור</div>
     <h2 class="rv">התור הבא<br>יכול להיות היום.</h2>
-    <div class="bk rv">
-      <div><h4>1. מה עושים?</h4><div class="chips" id="svc">
-        <button class="on" data-p="70">תספורת</button><button data-p="90">תספורת + זקן</button><button data-p="80">פייד</button><button data-p="45">זקן</button><button data-p="60">גילוח</button></div></div>
-      <div><h4>2. מתי?</h4><div class="chips" id="day"></div></div>
-      <div><h4>3. באיזו שעה?</h4><div class="chips" id="slot"></div></div>
-      <div class="sum"><p id="sumT"></p><a class="btn btn-red" id="go" href="#" target="_blank" rel="noopener">שליחה בוואטסאפ</a></div>
+    <div class="book rv">
+      <div class="step"><h4><i>1</i>מה עושים?</h4><div class="svc" id="svc">
+        <label><input type="radio" name="s" value="תספורת גבר" data-p="70" checked><span>תספורת גבר</span><small>30 דק׳</small><b>70 ₪</b></label>
+        <label><input type="radio" name="s" value="תספורת + זקן" data-p="90"><span>תספורת + זקן</span><small>45 דק׳</small><b>90 ₪</b></label>
+        <label><input type="radio" name="s" value="פייד מדויק" data-p="80"><span>פייד מדויק</span><small>40 דק׳</small><b>80 ₪</b></label>
+        <label><input type="radio" name="s" value="עיצוב זקן" data-p="45"><span>עיצוב זקן</span><small>20 דק׳</small><b>45 ₪</b></label>
+      </div></div>
+      <div class="step"><h4><i>2</i>באיזה יום?</h4><div class="days" id="day"></div></div>
+      <div class="step"><h4><i>3</i>באיזו שעה?</h4><div class="slots" id="slot"></div></div>
+      <div class="sum"><p id="sumT"></p><a class="btn btn-red" id="go" href="#" target="_blank" rel="noopener">אישור בוואטסאפ<svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></a></div>
     </div>
     <div class="info rv">
-      <div><h4>שעות פתיחה</h4><div><span>ראשון–חמישי</span><span dir="ltr">09:00–21:00</span></div><div><span>שישי</span><span dir="ltr">08:00–14:00</span></div><div><span>שבת</span><span>סגור</span></div></div>
-      <div><h4>איך מגיעים</h4><p>הרצל 17, ראשון לציון<br>חניה ברחוב · 2 דקות מהתחנה המרכזית<br>050-000-0000</p></div>
+      <div><h4>שעות פתיחה</h4><div class="r"><span>ראשון–חמישי</span><span dir="ltr">09:00–21:00</span></div><div class="r"><span>שישי</span><span dir="ltr">08:00–14:00</span></div><div class="r"><span>שבת</span><span>סגור</span></div></div>
+      <div><h4>איך מגיעים</h4><p>הרצל 17, ראשון לציון<br>חניה ברחוב · 2 דקות מהתחנה המרכזית<br><span dir="ltr">050-000-0000</span></p></div>
     </div>
   </section>
 </main>
 
-<footer><span>© BARBER 17 · הרצל 17, ראשון לציון</span><span>אינסטגרם · טיקטוק · וואטסאפ</span></footer>
+<footer class="ft"><span class="logo">BARBER <i style="color:var(--red);font-style:normal">17</i></span><span>הרצל 17, ראשון לציון · © 2026</span><nav><a href="#">אינסטגרם</a><a href="#">טיקטוק</a><a href="#">וואטסאפ</a></nav></footer>
 
 <script>
-const imgs=[...document.querySelectorAll('.stage img')],bars=[...document.querySelectorAll('.prog i')],secs=[...document.querySelectorAll('main .sc')],links=[...document.querySelectorAll('.bar nav a')];
-const capN=document.getElementById('capN'),capT=document.getElementById('capT');
+const imgs=[...document.querySelectorAll('.stage img')],secs=[...document.querySelectorAll('main .sc')],links=[...document.querySelectorAll('.bar nav a')];
+const capN=document.getElementById('capN'),capT=document.getElementById('capT'),capP=document.getElementById('capP');
 function show(k,t){imgs.forEach(i=>i.classList.toggle('on',i.dataset.k===k));if(t)capT.textContent=t}
 let cur=0;
-const so=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const i=secs.indexOf(e.target);cur=i;
-  const w=e.target.querySelector('.wk.on');show(w?w.dataset.k:e.target.dataset.k,w?w.dataset.t:e.target.dataset.t);
-  capN.innerHTML=String(i+1).padStart(2,'0')+'<small>/05</small>';bars.forEach((b,j)=>b.classList.toggle('on',j<=i));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cur=secs.indexOf(e.target);
+  show(e.target.dataset.k,e.target.dataset.t);
+  capN.textContent=String(cur+1).padStart(2,'0')+' / '+String(secs.length).padStart(2,'0');capP.style.setProperty('--p',((cur+1)/secs.length*100)+'%');
   links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
 secs.forEach(s=>so.observe(s));
-// прайс и работы: наведение меняет фото
-document.querySelectorAll('.pr').forEach(p=>{p.onmouseenter=()=>show(p.dataset.k);p.onmouseleave=()=>show(secs[cur].dataset.k,secs[cur].dataset.t)});
-const wimg=document.getElementById('wimg');
-document.querySelectorAll('.wk').forEach(w=>{const f=()=>{document.querySelectorAll('.wk').forEach(x=>x.classList.toggle('on',x===w));show(w.dataset.k,w.dataset.t);wimg.src='barber-img/'+({fade:'fade',design:'design',portrait:'portrait',beard:'beard',shave:'shave'})[w.dataset.k]+'.jpg'};w.onmouseenter=f;w.onclick=f});
-// виджет записи
+const back=()=>show(secs[cur].dataset.k,secs[cur].dataset.t);
+document.querySelectorAll('.pr,.gal figure').forEach(p=>{p.onmouseenter=()=>show(p.dataset.k,p.dataset.t);p.onmouseleave=back});
+
+// запись
 const dn=['א׳','ב׳','ג׳','ד׳','ה׳','ו׳','ש׳'],dayEl=document.getElementById('day'),slotEl=document.getElementById('slot');
-const st={svc:'תספורת',p:70,d:null,t:null};
-const days=[];for(let i=0,d=new Date();days.length<5;i++){const x=new Date(d);x.setDate(d.getDate()+i);if(x.getDay()!==6)days.push(x)}
-days.forEach((x,i)=>{const b=document.createElement('button');const df=Math.round((new Date(x).setHours(0,0,0,0)-new Date().setHours(0,0,0,0))/864e5);b.textContent=df===0?'היום':df===1?'מחר':'יום '+dn[x.getDay()]+' '+x.getDate()+'.'+(x.getMonth()+1);b.onclick=()=>{pick(dayEl,b);st.d=b.textContent;slots(x)};dayEl.append(b)});
-function slots(x){slotEl.innerHTML='';const end=x.getDay()===5?14:21,start=x.getDay()===5?8:9,now=new Date(),today=x.toDateString()===now.toDateString();let first=null;
-  for(let h=start;h<end;h++)for(const m of[0,30]){const b=document.createElement('button');b.textContent=String(h).padStart(2,'0')+':'+(m?'30':'00');
-    const busy=(today&&(h+m/60)<=now.getHours()+now.getMinutes()/60+.5)||((h*7+m+x.getDate())%5===0);if(busy)b.disabled=true;else{b.onclick=()=>{pick(slotEl,b);st.t=b.textContent;sum()};if(!first)first=b}
-    slotEl.append(b)}
-  if(first){pick(slotEl,first);st.t=first.textContent}else{st.t=null;slotEl.insertAdjacentHTML('beforeend','<span style="color:#8D8780;font-size:14px;align-self:center">אין תורים פנויים — בחרו יום אחר</span>')}sum()}
+const st={d:null,t:null},pad=n=>String(n).padStart(2,'0');
+const days=[];for(let i=0;days.length<5;i++){const x=new Date();x.setDate(x.getDate()+i);if(x.getDay()!==6)days.push(x)}
+days.forEach(x=>{const df=Math.round((new Date(x).setHours(0,0,0,0)-new Date().setHours(0,0,0,0))/864e5);
+  const lab=df===0?'היום':df===1?'מחר':'יום '+dn[x.getDay()];
+  const b=document.createElement('button');b.type='button';b.innerHTML='<small>'+lab+'</small><b>'+x.getDate()+'.'+(x.getMonth()+1)+'</b>';
+  b.onclick=()=>{pick(dayEl,b);st.d=lab;slots(x)};dayEl.append(b)});
+function slots(x){slotEl.innerHTML='';const fri=x.getDay()===5,start=fri?8:9,end=fri?14:21,now=new Date(),today=x.toDateString()===now.toDateString();let n=0;
+  for(let h=start;h<end&&n<12;h++)for(const m of[0,30]){if(n>=12)break;
+    if((today&&(h+m/60)<=now.getHours()+now.getMinutes()/60+.5)||((h*7+m+x.getDate())%4===0))continue;
+    const b=document.createElement('button');b.type='button';b.textContent=pad(h)+':'+pad(m);b.onclick=()=>{pick(slotEl,b);st.t=b.textContent;sum()};slotEl.append(b);n++}
+  if(n){slotEl.firstChild.click()}else{st.t=null;slotEl.innerHTML='<div class="none">היום כבר אין תורים פנויים — בחרו יום אחר.</div>';sum()}}
 function pick(box,b){box.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b))}
-function sum(){const T=document.getElementById('sumT');if(!st.t){T.innerHTML='בחרו יום ושעה';return}
-  T.innerHTML='<b>'+st.svc+'</b> · '+st.d+' ב־'+st.t+' · '+st.p+' ₪';
-  document.getElementById('go').href='https://wa.me/972500000000?text='+encodeURIComponent('היי, אשמח לקבוע '+st.svc+' '+st.d+' ב־'+st.t)}
-document.querySelectorAll('#svc button').forEach(b=>b.onclick=()=>{pick(document.getElementById('svc'),b);st.svc=b.textContent;st.p=b.dataset.p;sum()});
+function sum(){const s=document.querySelector('#svc input:checked'),T=document.getElementById('sumT'),go=document.getElementById('go');
+  if(!st.t){T.textContent='בחרו יום ושעה';go.style.opacity=.4;return}go.style.opacity=1;
+  T.innerHTML='<b>'+s.value+'</b> · '+st.d+' ב־'+st.t+' · '+s.dataset.p+' ₪';
+  go.href='https://wa.me/972500000000?text='+encodeURIComponent('היי, אשמח לקבוע '+s.value+' '+st.d+' ב־'+st.t)}
+document.querySelectorAll('#svc input').forEach(i=>i.onchange=sum);
 dayEl.firstChild.click();
+
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
