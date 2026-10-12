@@ -4,8 +4,8 @@ import os
 SRC = os.path.join(os.path.dirname(__file__), 'shots')
 OUT = os.path.join(os.path.dirname(__file__), '..', 'img')
 JOBS = {'roti-desktop': [720, 1440], 'roti-menu': [720, 1440], 'roti-mobile': [390], 'roti-mobile-menu': [390],
-        'concept-barber': [720, 1440], 'concept-cafe': [720, 1440], 'concept-dental': [720, 1440],
-        'concept-barber-mobile': [390], 'concept-cafe-mobile': [390], 'concept-dental-mobile': [390]}
+        'concept-barber': [720, 1440], 'concept-residence': [720, 1440], 'concept-cafe': [720, 1440], 'concept-dental': [720, 1440],
+        'concept-barber-mobile': [390], 'concept-residence-mobile': [390], 'concept-cafe-mobile': [390], 'concept-dental-mobile': [390]}
 for name, widths in JOBS.items():
     im = Image.open(os.path.join(SRC, name + '.png')).convert('RGB')
     for w in widths:

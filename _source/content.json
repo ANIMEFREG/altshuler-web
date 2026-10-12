@@ -37,7 +37,7 @@
       "altDesktop": "עמוד הבית של אתר רוטיסרי במחשב", "altMenu": "עמוד התפריט של רוטיסרי במחשב",
       "altMobile": "עמוד הבית של רוטיסרי בטלפון", "altMobileMenu": "התפריט של רוטיסרי בטלפון",
       "conceptsTitle": "קונספטים — כך זה יכול להיראות אצלכם", "conceptLabel": "קונספט", "conceptOpen": "לצפייה",
-      "concepts": [["barber", "BARBER 17", "מספרת גברים"], ["cafe", "קפה לילה", "בית קפה שכונתי"], ["dental", "סמייל", "מרפאת שיניים"]],
+      "concepts": [["residence", "LUMA", "פרויקט מגורים"], ["cafe", "קפה לילה", "בית קפה שכונתי"], ["dental", "סמייל", "מרפאת שיניים"]],
       "nextTitle": "הפרויקט הבא יכול להיות שלכם.",
       "nextText": "אין לכם אתר, או שיש אתר שלא באמת עובד בשבילכם? שלחו לנו קישור — נגיד לכם בכנות מה היינו משפרים.",
       "nextCta": "שלחו לנו את האתר שלכם"
@@ -147,7 +147,7 @@
       "altDesktop": "Rotisserie home page on desktop", "altMenu": "Rotisserie menu page on desktop",
       "altMobile": "Rotisserie home page on a phone", "altMobileMenu": "Rotisserie menu on a phone",
       "conceptsTitle": "Concepts — what yours could look like", "conceptLabel": "Concept", "conceptOpen": "View",
-      "concepts": [["barber", "BARBER 17", "Barbershop"], ["cafe", "Café Lila", "Neighbourhood café"], ["dental", "Smile", "Dental clinic"]],
+      "concepts": [["residence", "LUMA", "Residential project"], ["cafe", "Café Lila", "Neighbourhood café"], ["dental", "Smile", "Dental clinic"]],
       "nextTitle": "The next project could be yours.",
       "nextText": "No website yet — or one that doesn't really work for you? Send us a link and we'll tell you honestly what we'd improve.",
       "nextCta": "Send us your site"

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMA — 68 דירות בוטיק מול הפארק, רמת השרון | קונספט</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bellefair&family=IBM+Plex+Sans+Hebrew:wght@300;400;500;600&display=swap">
+<style>
+:root{--stone:#F3EFE8;--stone2:#E9E3D9;--ink:#1C211E;--ink2:#4B504C;--mut:#86827A;--line:#1C211E1f;--green:#232B26;--brass:#A88A5A;--brass2:#C9AE80;--d:'Bellefair',serif;--s:'IBM Plex Sans Hebrew',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--stone);color:var(--ink);font:300 17px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+.ey{font:500 13.5px/1 var(--s);letter-spacing:.06em;color:var(--brass)}
+h2{font:400 clamp(40px,4.6vw,68px)/1.08 var(--d);margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;font-weight:500;font-size:15px;letter-spacing:.02em;border:1px solid currentColor;transition:background .25s,color .25s,border-color .25s;cursor:pointer;background:none}
+.btn-b{background:var(--brass);border-color:var(--brass);color:#fff}.btn-b:hover{background:var(--ink);border-color:var(--ink)}
+.sec{padding:clamp(80px,10vw,150px) 0}
+
+/* шапка */
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;color:#fff;transition:background .35s,color .35s,box-shadow .35s}
+.nav .wrap{display:flex;align-items:center;gap:36px;height:84px}
+.nav.solid{background:var(--stone);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.logo{font:400 30px/1 var(--d);letter-spacing:.32em;margin-inline-end:auto}
+.logo small{display:block;font:400 11.5px/1 var(--s);letter-spacing:.04em;opacity:.7;margin-top:6px}
+.nav nav{display:flex;gap:30px;font-size:14.5px;font-weight:400}
+.nav nav a{opacity:.85}.nav nav a:hover{opacity:1}
+.nav .tel{font-weight:500;font-size:14.5px}
+.nav .btn{min-height:44px;padding:0 20px;font-size:14px}
+
+/* hero */
+.hero{position:relative;height:100vh;min-height:640px;color:#fff;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:zoom 14s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:none}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#141814e6 0%,#14181840 45%,#14181855 100%)}
+.hero .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:40px}
+.hero h1{font:400 clamp(52px,6.8vw,108px)/1.02 var(--d)}
+.hero p{font-size:clamp(17px,1.5vw,20px);max-width:32em;margin-top:22px;color:#ffffffd9}
+.hero .cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero .btn:not(.btn-b){color:#fff}.hero .btn:not(.btn-b):hover{background:#fff;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid #ffffff40}
+.facts div{padding:20px 0 0;padding-inline-end:20px}
+.facts div+div{padding-inline-start:24px;border-inline-start:1px solid #ffffff30}
+.facts b{display:block;font:400 30px/1.1 var(--d)}
+.facts span{font-size:13.5px;color:#ffffffb3}
+
+/* интро */
+.intro{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,7vw,120px);align-items:center}
+.intro .txt p{font-size:18px;color:var(--ink2);margin-top:24px;max-width:30em}
+.intro .sig{display:flex;gap:40px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.intro .sig b{display:block;font:400 40px/1 var(--d)}
+.intro .sig span{font-size:14px;color:var(--mut)}
+.intro figure{position:relative}
+.intro figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.intro figure::before{content:'';position:absolute;inset:28px -28px -28px 28px;border:1px solid var(--brass);z-index:-1}
+.tag{position:absolute;bottom:16px;inset-inline-start:16px;background:#1c211ecc;color:#fff;font-size:12px;letter-spacing:.08em;padding:6px 10px}
+
+/* выбор квартиры */
+.pick{background:var(--green);color:#EDE9E1}
+.pick .ey{color:var(--brass2)}
+.pickhd{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.pickhd p{color:#EDE9E1b3;max-width:28em;margin-top:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{min-height:42px;padding:0 18px;border:1px solid #ffffff2e;background:none;cursor:pointer;font-size:14.5px;transition:all .2s}
+.filters button:hover{border-color:#ffffff80}
+.filters button.on{background:#EDE9E1;color:var(--ink);border-color:#EDE9E1}
+.board{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(28px,4vw,64px);margin-top:48px;align-items:start}
+.bwrap{background:#1b221e;border:1px solid #ffffff14;padding:clamp(14px,2vw,28px)}
+.bwrap svg{width:100%;height:auto;display:block}
+.u{cursor:pointer;transition:fill .2s,stroke .2s,opacity .2s}
+.u rect{transition:fill .2s,stroke .2s}
+.u.av rect{fill:#A88A5A33;stroke:#C9AE80}
+.u.rs rect{fill:#ffffff0a;stroke:#C9AE80;stroke-dasharray:4 3}
+.u.sd rect{fill:#ffffff06;stroke:#ffffff1a}
+.u.sd{cursor:default}
+.u text{font:500 12px var(--s);fill:#EDE9E1;text-anchor:middle;pointer-events:none}
+.u.sd text{fill:#ffffff40}
+.u.av:hover rect{fill:#A88A5A66}
+.u.on rect{fill:#C9AE80!important;stroke:#fff!important}.u.on text{fill:var(--ink)}
+.u.dim{opacity:.18}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px;font-size:13.5px;color:#EDE9E1a6}
+.legend i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-inline-end:8px;border:1px solid #C9AE80;background:#A88A5A33}
+.legend .r i{border-style:dashed;background:none}.legend .s i{border-color:#ffffff1a;background:#ffffff06}
+.panel{position:sticky;top:110px;background:#EDE9E1;color:var(--ink);padding:clamp(22px,2.4vw,34px)}
+.panel .st{display:inline-block;font-size:12.5px;font-weight:500;letter-spacing:.06em;padding:5px 10px;background:#2F7D4F1f;color:#2F7D4F}
+.panel .st.r{background:#A88A5A26;color:#7a5f33}
+.panel h3{font:400 44px/1 var(--d);margin:14px 0 6px}
+.panel .sub{font-size:15px;color:var(--mut)}
+.panel .plan{margin:22px 0;background:#fff;padding:14px;border:1px solid var(--line)}
+.panel .plan svg{width:100%;height:auto;display:block}
+.plan rect{fill:#fff;stroke:#1C211E;stroke-width:1.5}
+.plan rect.b{fill:#A88A5A14;stroke:#A88A5A;stroke-dasharray:5 4}
+.plan text{font:400 11px var(--s);fill:#4B504C;text-anchor:middle}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}
+.specs div{padding:14px 0}
+.specs div+div{padding-inline-start:16px;border-inline-start:1px solid var(--line)}
+.specs b{display:block;font:400 26px/1.1 var(--d)}
+.specs span{font-size:13px;color:var(--mut)}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:20px 0}
+.price span{font-size:14px;color:var(--mut)}
+.price b{font:400 34px/1 var(--d)}
+.panel .btn{width:100%}
+.left{font-size:14px;color:#EDE9E1a6;margin-top:10px}
+.left b{color:#fff;font-weight:500}
+
+/* интерьер */
+.inhd{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.inhd p{color:var(--ink2);max-width:30em}
+.collage{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(60px,7vw,100px);gap:clamp(10px,1.4vw,18px);margin-top:56px}
+.collage figure{position:relative;overflow:hidden}
+.collage img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.collage figure:hover img{transform:scale(1.04)}
+.c1{grid-column:1/9;grid-row:span 5}.c2{grid-column:9/13;grid-row:span 7}.c3{grid-column:1/5;grid-row:span 4}.c4{grid-column:5/9;grid-row:span 4}.c5{grid-column:9/13;grid-row:span 2}
+.collage figcaption{position:absolute;bottom:0;inset-inline:0;padding:30px 16px 12px;background:linear-gradient(0deg,#0008,#0000);color:#fff;font-size:13.5px}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid var(--ink)}
+.spec div{padding:24px 0 0;padding-inline-end:24px}
+.spec div+div{padding-inline-start:24px;border-inline-start:1px solid var(--line)}
+.spec b{display:block;font:400 22px/1.25 var(--d);margin-bottom:6px}
+.spec span{font-size:14.5px;color:var(--ink2)}
+
+/* удобства */
+.amen{background:var(--stone2)}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,28px);margin-top:56px}
+.agrid figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.agrid figcaption{display:flex;justify-content:space-between;gap:20px;margin-top:16px;align-items:baseline}
+.agrid figcaption b{font:400 26px/1.2 var(--d)}
+.agrid figcaption span{font-size:14.5px;color:var(--ink2);max-width:22em;text-align:left}
+.alist{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line)}
+.alist div{padding:22px 0;padding-inline-end:20px;font-size:15px;color:var(--ink2)}
+.alist div+div{padding-inline-start:20px;border-inline-start:1px solid var(--line)}
+.alist b{display:block;color:var(--ink);font-weight:500;margin-bottom:2px}
+
+/* локация */
+.loc{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:center}
+.dist{margin-top:36px;border-top:1px solid var(--ink)}
+.dist div{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}
+.dist b{font:400 24px/1 var(--d);white-space:nowrap}
+.map{background:#E4DED2;aspect-ratio:1/1;position:relative}
+.map svg{width:100%;height:100%;display:block}
+
+/* ход строительства */
+.prog{background:var(--ink);color:#EDE9E1}
+.prog .ey{color:var(--brass2)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;position:relative}
+.steps div{padding-top:30px;position:relative;padding-inline-end:20px}
+.steps div::before{content:'';position:absolute;top:0;inset-inline:0;height:2px;background:#ffffff1f}
+.steps div.done::before{background:var(--brass2)}
+.steps div.now::before{background:linear-gradient(to left,var(--brass2) 60%,#ffffff1f 60%)}
+.steps div::after{content:'';position:absolute;top:-5px;inset-inline-start:0;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid #ffffff40}
+.steps div.done::after,.steps div.now::after{background:var(--brass2);border-color:var(--brass2)}
+.steps small{font-size:13px;color:#EDE9E199}
+.steps b{display:block;font:400 26px/1.2 var(--d);margin:6px 0 4px}
+.steps span{font-size:14px;color:#EDE9E1b3}
+
+/* контакт */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
+.contact .office{margin-top:36px;display:grid;gap:18px;font-size:15.5px;color:var(--ink2)}
+.contact .office b{display:block;color:var(--ink);font-weight:500}
+form{background:#fff;padding:clamp(24px,3vw,44px);border:1px solid var(--line)}
+form h3{font:400 30px/1.2 var(--d);margin-bottom:22px}
+label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:18px}
+label input,label select{display:block;width:100%;margin-top:6px;border:0;border-bottom:1px solid #1C211E40;background:none;padding:10px 0;font-size:16.5px;font-weight:400;color:var(--ink);outline:none;border-radius:0}
+label input:focus,label select:focus{border-color:var(--brass)}
+form .btn{width:100%;margin-top:8px}
+form small{display:block;margin-top:14px;font-size:12.5px;color:var(--mut)}
+.ok{display:none;padding:30px 0;font:400 28px/1.3 var(--d)}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13px;color:var(--mut)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer p{max-width:60em}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+
+@media (max-width:1100px){.nav nav{display:none}}
+@media (max-width:960px){
+  .intro,.board,.loc,.contact,.inhd{grid-template-columns:1fr}
+  .intro figure{max-width:520px}.intro figure::before{inset:16px -10px -16px 10px}
+  .panel{position:static}
+  .spec,.alist{grid-template-columns:1fr 1fr}
+  .spec div:nth-child(3),.alist div:nth-child(3){padding-inline-start:0;border:0}
+  .steps{grid-template-columns:1fr;gap:0}
+  .steps div{padding:0 0 26px;padding-inline-start:30px}
+  .steps div::before{top:0;bottom:0;width:2px;height:auto;inset-inline:5px auto}
+  .steps div.now::before{background:linear-gradient(var(--brass2) 60%,#ffffff1f 60%)}
+  .steps div::after{top:4px;inset-inline-start:0}
+}
+@media (max-width:640px){
+  .nav .tel{display:none}.nav .wrap{height:70px;gap:12px}.logo{font-size:24px}
+  .hero{min-height:680px}
+  .facts{grid-template-columns:1fr 1fr;margin-top:36px}
+  .facts div:nth-child(3){padding-inline-start:0;border:0}
+  .facts b{font-size:21px}
+  .collage{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
+  .collage figure{grid-column:auto!important;grid-row:auto!important;aspect-ratio:4/5}
+  .collage .c1{grid-column:1/-1!important;aspect-ratio:4/3}
+  .collage .c5{display:none}
+  .spec,.alist{grid-template-columns:1fr}
+  .spec div,.alist div{padding:18px 0!important;border-inline-start:0!important;border-bottom:1px solid var(--line)}
+  .agrid{grid-template-columns:1fr}
+  .agrid figcaption{flex-direction:column}.agrid figcaption span{text-align:right}
+  .specs b{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="#top">LUMA<small>רמת השרון</small></a>
+  <nav><a href="#about">הפרויקט</a><a href="#apts">בחירת דירה</a><a href="#inside">מפרט</a><a href="#loc">מיקום</a><a href="#build">התקדמות</a></nav>
+  <a class="tel" href="tel:030000000" dir="ltr">03-000-0000</a>
+  <a class="btn btn-b" href="#contact">תיאום פגישה</a>
+</div></header>
+
+<section class="hero" id="top">
+  <img src="residence-img/hero.jpg" alt="הדמיית חזית הבניין בשקיעה">
+  <div class="wrap">
+    <span class="ey">68 דירות בוטיק · רמת השרון</span>
+    <h1 style="margin-top:18px">שקט של פארק.<br>עשר דקות מהעיר.</h1>
+    <p>בניין בוטיק של 12 קומות מול פארק רמת השרון. דירות 3–6 חדרים עם מרפסות שמש, לובי בגובה כפול ובריכה על הגג.</p>
+    <div class="cta"><a class="btn btn-b" href="#apts">לבחירת דירה</a><a class="btn" href="#contact">תיאום פגישה במשרד המכירות</a></div>
+    <div class="facts">
+      <div><b>3–6 חדרים</b><span>84 עד 196 מ״ר</span></div>
+      <div><b>מ־2,390,000 ₪</b><span>כולל מע״מ וחניה</span></div>
+      <div><b>קיץ 2028</b><span>מועד אכלוס משוער</span></div>
+      <div><b id="leftTop">31 דירות</b><span>נותרו למכירה</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap intro">
+    <div class="txt rv">
+      <span class="ey">הפרויקט</span>
+      <h2>רק 68 שכנים.<br>והפארק בתור החצר.</h2>
+      <p>LUMA הוא בניין בוטיק בקצה השקט של רמת השרון: שש דירות בקומה, מרפסות שמש מכל כיוון, וכניסה ישירה לשבילי הפארק. תכננו אותו למשפחות שרוצות שקט — בלי לוותר על העיר.</p>
+      <div class="sig">
+        <div><b>12</b><span>קומות</span></div>
+        <div><b>6</b><span>דירות בקומה</span></div>
+        <div><b>2</b><span>פנטהאוזים</span></div>
+      </div>
+    </div>
+    <figure class="rv"><img src="residence-img/facade.jpg" alt="הדמיית חזית" loading="lazy"><span class="tag">הדמיה להמחשה</span></figure>
+  </div>
+</section>
+
+<section class="sec pick" id="apts">
+  <div class="wrap">
+    <div class="pickhd">
+      <div><span class="ey">בחירת דירה</span><h2>בחרו קומה, כיוון ודירה.</h2><p>לחצו על דירה בחזית כדי לראות תוכנית, שטח ומחיר. הצבעים מתעדכנים מול מצב המכירות.</p></div>
+      <div class="filters" id="flt"><button class="on" data-t="all">הכל</button><button data-t="3">3 חד׳</button><button data-t="4">4 חד׳</button><button data-t="5">5 חד׳</button><button data-t="6">פנטהאוז</button></div>
+    </div>
+    <div class="board">
+      <div>
+        <div class="bwrap"><svg id="bld" viewBox="0 0 640 760" role="img" aria-label="חזית הבניין לפי דירות"></svg></div>
+        <div class="legend"><span><i></i>פנויה</span><span class="r"><i></i>בתהליך</span><span class="s"><i></i>נמכרה</span></div>
+        <div class="left" id="left"></div>
+      </div>
+      <aside class="panel" id="panel"></aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="inside">
+  <div class="wrap">
+    <div class="inhd rv"><div><span class="ey">בפנים</span><h2>חומרים שמרגישים<br>כל יום.</h2></div><p>מטבח מעוצב עם אי, פורצלן בפורמט גדול, חלונות מהרצפה עד התקרה ומערכת בית חכם בכל דירה. כל מה שבדרך כלל הוא „שדרוג” — אצלנו נכלל במחיר.</p></div>
+    <div class="collage">
+      <figure class="c1 rv"><img src="residence-img/living.jpg" alt="סלון" loading="lazy"><figcaption>סלון בדירת 5 חדרים · הדמיה</figcaption></figure>
+      <figure class="c2 rv"><img src="residence-img/living2.jpg" alt="פינת ישיבה מול הנוף" loading="lazy"><figcaption>חלונות מהרצפה עד התקרה</figcaption></figure>
+      <figure class="c3 rv"><img src="residence-img/kitchen.jpg" alt="מטבח" loading="lazy"><figcaption>מטבח עם אי</figcaption></figure>
+      <figure class="c4 rv"><img src="residence-img/bedroom.jpg" alt="חדר שינה" loading="lazy"><figcaption>חדר הורים</figcaption></figure>
+      <figure class="c5 rv"><img src="residence-img/view.jpg" alt="נוף מהמרפסת" loading="lazy"><figcaption>הנוף מקומה 9</figcaption></figure>
+    </div>
+    <div class="spec rv">
+      <div><b>פורצלן 120×60</b><span>בכל הדירה, כולל מרפסות</span></div>
+      <div><b>מיזוג VRF</b><span>מיני־מרכזי, שליטה מהטלפון</span></div>
+      <div><b>תקרה 2.80 מ׳</b><span>וחלונות גבוהים בסלון</span></div>
+      <div><b>ממ״ד בכל דירה</b><span>משמש גם כחדר עבודה</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec amen">
+  <div class="wrap">
+    <span class="ey rv">לדיירים</span>
+    <h2 class="rv">מה שמחכה למטה.<br>ומה שמחכה למעלה.</h2>
+    <div class="agrid">
+      <figure class="rv"><img src="residence-img/lobby.jpg" alt="לובי" loading="lazy"><figcaption><b>לובי בגובה כפול</b><span>אבן טבעית, עץ אגוז ועמדת קבלת חבילות.</span></figcaption></figure>
+      <figure class="rv"><img src="residence-img/pool.jpg" alt="בריכה על הגג" loading="lazy"><figcaption><b>בריכה על הגג</b><span>בריכה מחוממת, דק שיזוף ונוף לפארק — לדיירים בלבד.</span></figcaption></figure>
+    </div>
+    <div class="alist rv">
+      <div><b>חניה כפולה</b>לכל דירת 5 חדרים ומעלה</div>
+      <div><b>עמדות טעינה</b>לרכב חשמלי בכל חניה</div>
+      <div><b>חדר כושר</b>פתוח 24/7 בקומת הלובי</div>
+      <div><b>מחסן פרטי</b>לכל דירה, בקומת המרתף</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="loc">
+  <div class="wrap loc">
+    <div class="rv">
+      <span class="ey">מיקום</span>
+      <h2>הכל קרוב.<br>חוץ מהרעש.</h2>
+      <div class="dist">
+        <div><span>שבילי פארק רמת השרון</span><b>1 דק׳</b></div>
+        <div><span>בית ספר יסודי וגני ילדים</span><b>4 דק׳</b></div>
+        <div><span>מרכז מסחרי</span><b>6 דק׳</b></div>
+        <div><span>תחנת רכבת</span><b>8 דק׳</b></div>
+        <div><span>כביש 5 / נתיבי איילון</span><b>5 דק׳</b></div>
+      </div>
+    </div>
+    <div class="map rv" aria-label="מפה סכמטית">
+      <svg viewBox="0 0 500 500">
+        <path d="M60 300 C 90 210, 200 190, 250 240 S 380 330, 450 270 L 470 420 C 380 470, 160 470, 70 430 Z" fill="#C9D1B8"/>
+        <text x="260" y="390" font-family="IBM Plex Sans Hebrew" font-size="15" fill="#5E6B52" text-anchor="middle">פארק רמת השרון</text>
+        <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M0 150 L500 120"/><path d="M330 0 L300 500"/><path d="M0 60 C 150 80, 200 40, 500 30" stroke-width="20" stroke="#F4F1EA"/></g>
+        <g stroke="#ffffffaa" stroke-width="6" fill="none"><path d="M120 0 L160 500"/><path d="M0 230 L330 210"/></g>
+        <text x="420" y="22" font-family="IBM Plex Sans Hebrew" font-size="13" fill="#86827A">כביש 5</text>
+        <circle cx="440" cy="190" r="7" fill="#1C211E"/><text x="440" y="214" font-family="IBM Plex Sans Hebrew" font-size="13" fill="#4B504C" text-anchor="middle">רכבת</text>
+        <circle cx="90" cy="110" r="7" fill="#1C211E"/><text x="90" y="96" font-family="IBM Plex Sans Hebrew" font-size="13" fill="#4B504C" text-anchor="middle">מרכז מסחרי</text>
+        <circle cx="200" cy="300" r="7" fill="#1C211E"/><text x="200" y="326" font-family="IBM Plex Sans Hebrew" font-size="13" fill="#4B504C" text-anchor="middle">בית ספר</text>
+        <circle cx="250" cy="215" r="34" fill="#A88A5A" opacity=".18"><animate attributeName="r" values="22;40;22" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="250" cy="215" r="13" fill="#A88A5A" stroke="#fff" stroke-width="3"/>
+        <text x="250" y="178" font-family="Bellefair" font-size="22" fill="#1C211E" text-anchor="middle" letter-spacing="4">LUMA</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec prog" id="build">
+  <div class="wrap">
+    <span class="ey rv">התקדמות הבנייה</span>
+    <h2 class="rv">השלד כבר בקומה 7.</h2>
+    <div class="steps rv">
+      <div class="done"><small>מרץ 2025</small><b>היתר בנייה</b><span>התקבל היתר מלא</span></div>
+      <div class="done"><small>יולי 2025</small><b>חפירה ודיפון</b><span>הושלמו, כולל 2 קומות מרתף</span></div>
+      <div class="now"><small>עכשיו</small><b>שלד</b><span>קומה 7 מתוך 12</span></div>
+      <div><small>2027</small><b>גמרים ומערכות</b><span>חיפוי, חלונות, מטבחים</span></div>
+      <div><small>קיץ 2028</small><b>אכלוס</b><span>מסירת מפתחות</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="ey">משרד המכירות</span>
+      <h2>בואו לראות<br>את הדירה בעיניים.</h2>
+      <p style="color:var(--ink2);margin-top:20px;max-width:28em">במשרד המכירות יש דגם של הבניין, דוגמאות של כל החומרים וסיור VR בדירה לבחירתכם. הפגישה לוקחת כ־45 דקות.</p>
+      <div class="office">
+        <div><b>משרד המכירות</b>רחוב הפארק 3, רמת השרון</div>
+        <div><b>שעות פעילות</b>א׳–ה׳ <span dir="ltr">10:00–19:00</span> · ו׳ <span dir="ltr">09:00–13:00</span></div>
+        <div><b>טלפון</b><span dir="ltr">03-000-0000</span> · או וואטסאפ</div>
+      </div>
+    </div>
+    <form class="rv" id="form">
+      <h3>תיאום פגישה</h3>
+      <div id="fields">
+        <label>שם מלא<input name="name" required autocomplete="name"></label>
+        <label>טלפון<input name="tel" type="tel" required autocomplete="tel" dir="rtl"></label>
+        <label>מה מעניין אתכם?<select name="t" id="ftype"><option>3 חדרים</option><option>4 חדרים</option><option>5 חדרים</option><option>פנטהאוז</option><option>עוד לא בטוחים</option></select></label>
+        <button class="btn btn-b" type="submit">שלחו לי פרטים</button>
+        <small>נציג מכירות יחזור אליכם עוד היום. בלי ספאם.</small>
+      </div>
+      <div class="ok" id="ok">תודה! נציג מכירות יחזור אליכם עוד היום.</div>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© LUMA רמת השרון</span><p>כל ההדמיות והתמונות להמחשה בלבד. המחירים כוללים מע״מ וחניה אחת, ועשויים להשתנות. אין באמור הצעה מחייבת.</p></div></footer>
+
+<script>
+const T={3:{n:'3 חדרים',a:84,b:12,p:2390000,pl:[[0,0,190,140,'סלון + מטבח'],[190,0,130,90,'חדר הורים'],[190,90,130,50,'רחצה'],[0,140,100,80,'ממ״ד'],[100,140,220,80,'מרפסת',1]]},
+  4:{n:'4 חדרים',a:104,b:14,p:2890000,pl:[[0,0,170,130,'סלון + מטבח'],[170,0,150,80,'חדר הורים'],[170,80,150,50,'רחצה'],[0,130,100,90,'ממ״ד'],[100,130,100,90,'חדר'],[200,130,120,90,'מרפסת',1]]},
+  5:{n:'5 חדרים',a:128,b:16,p:3490000,pl:[[0,0,160,120,'סלון + מטבח'],[160,0,160,75,'חדר הורים'],[160,75,80,45,'רחצה'],[240,75,80,45,'רחצה'],[0,120,90,100,'ממ״ד'],[90,120,90,100,'חדר'],[180,120,70,100,'חדר'],[250,120,70,100,'מרפסת',1]]},
+  6:{n:'פנטהאוז 6 חדרים',a:196,b:110,p:6900000,pl:[[0,0,150,110,'סלון'],[150,0,90,110,'מטבח'],[240,0,80,110,'חדר הורים'],[0,110,80,60,'ממ״ד'],[80,110,80,60,'חדר'],[160,110,80,60,'חדר'],[240,110,80,60,'רחצה'],[0,170,320,50,'מרפסת גג 110 מ״ר',1]]}};
+const pos=[3,4,5,5,4,3],dir=['צפון־מזרח','צפון','צפון־מערב','דרום־מערב','דרום','דרום־מזרח'];
+const apts=[];
+for(let f=1;f<=11;f++)for(let u=0;u<6;u++){const s=(f*7+u*13+f*u)%10;apts.push({id:(f-1)*6+u+1,f,u,t:pos[u],d:dir[u],s:s<5?'sd':s===5?'rs':'av'})}
+apts.push({id:67,f:12,u:0,t:6,d:'צפון ומזרח',s:'sd'},{id:68,f:12,u:1,t:6,d:'דרום ומערב',s:'av'});
+const price=a=>Math.round((T[a.t].p+(a.f-1)*28000)/10000)*10000,fmt=n=>n.toLocaleString('en-US')+' ₪';
+const svg=document.getElementById('bld'),NS='http://www.w3.org/2000/svg',X0=24,W=552,FH=52,Y0=70;
+let h='<path d="M'+(X0+40)+' '+(Y0-22)+' H'+(X0+W-40)+'" stroke="#C9AE80" stroke-width="1" opacity=".5"/>';
+for(let f=12;f>=1;f--){const y=Y0+(12-f)*FH;h+='<text x="'+(X0+W+30)+'" y="'+(y+FH/2+4)+'" fill="#EDE9E166" font-size="12" font-family="IBM Plex Sans Hebrew" text-anchor="middle">'+f+'</text>'}
+svg.innerHTML=h+'<rect x="'+X0+'" y="'+(Y0+12*FH)+'" width="'+W+'" height="46" fill="#ffffff08" stroke="#ffffff1a"/><text x="'+(X0+W/2)+'" y="'+(Y0+12*FH+28)+'" fill="#EDE9E180" font-size="13" font-family="IBM Plex Sans Hebrew" text-anchor="middle">לובי · כניסה מהפארק</text>';
+apts.forEach(a=>{const n=a.f===12?2:6,w=W/n,x=X0+W-(a.u+1)*w,y=Y0+(12-a.f)*FH;
+  const g=document.createElementNS(NS,'g');g.setAttribute('class','u '+a.s);g.dataset.id=a.id;
+  g.innerHTML='<rect x="'+(x+3)+'" y="'+(y+3)+'" width="'+(w-6)+'" height="'+(FH-6)+'"/><text x="'+(x+w/2)+'" y="'+(y+FH/2+4)+'">'+a.id+'</text>';
+  if(a.s!=='sd'){g.onclick=()=>sel(a);g.setAttribute('tabindex','0');g.onkeydown=e=>{if(e.key==='Enter')sel(a)}}
+  a.el=g;svg.append(g)});
+const avail=apts.filter(a=>a.s==='av').length;
+document.getElementById('leftTop').textContent=avail+' דירות';
+function plan(t){return '<svg viewBox="-4 -4 328 228">'+T[t].pl.map(r=>'<rect '+(r[5]?'class="b" ':'')+'x="'+r[0]+'" y="'+r[1]+'" width="'+r[2]+'" height="'+r[3]+'"/><text x="'+(r[0]+r[2]/2)+'" y="'+(r[1]+r[3]/2+4)+'">'+r[4]+'</text>').join('')+'</svg>'}
+const panel=document.getElementById('panel');
+function sel(a){apts.forEach(x=>x.el.classList.toggle('on',x===a));const t=T[a.t];
+  panel.innerHTML='<span class="st'+(a.s==='rs'?' r':'')+'">'+(a.s==='rs'?'בתהליך רכישה':'פנויה למכירה')+'</span><h3>דירה '+a.id+'</h3><div class="sub">'+t.n+' · קומה '+a.f+' · כיוון '+a.d+'</div>'+
+  '<div class="plan">'+plan(a.t)+'</div><div class="specs"><div><b>'+t.a+' מ״ר</b><span>שטח הדירה</span></div><div><b>'+t.b+' מ״ר</b><span>מרפסת</span></div><div><b>'+(a.t>=5?2:1)+'</b><span>חניות</span></div></div>'+
+  '<div class="price"><span>מחיר כולל מע״מ</span><b>'+fmt(price(a))+'</b></div><a class="btn btn-b" href="#contact" id="want">אני רוצה את הדירה הזו</a>';
+  document.getElementById('want').onclick=()=>{document.getElementById('ftype').value=a.t===6?'פנטהאוז':a.t+' חדרים'}}
+let cur='all';
+function filt(t){cur=t;let n=0;apts.forEach(a=>{const m=t==='all'||String(a.t)===t;a.el.classList.toggle('dim',!m);if(m&&a.s==='av')n++});
+  document.getElementById('left').innerHTML='<b>'+n+'</b> דירות פנויות '+(t==='all'?'בבניין':'מסוג זה');
+  const first=apts.slice().reverse().find(a=>a.s==='av'&&(t==='all'||String(a.t)===t));if(first)sel(first)}
+document.querySelectorAll('#flt button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#flt button').forEach(x=>x.classList.toggle('on',x===b));filt(b.dataset.t)});
+filt('all');
+document.getElementById('form').onsubmit=e=>{e.preventDefault();document.getElementById('fields').style.display='none';document.getElementById('ok').style.display='block'};
+const nav=document.getElementById('nav');const onS=()=>nav.classList.toggle('solid',scrollY>innerHeight*.8);addEventListener('scroll',onS,{passive:true});onS();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<a href="../" style="position:fixed;bottom:16px;right:16px;z-index:30;background:#121212;color:#F4F1EA;font:500 13px/1 Heebo,Assistant,sans-serif;padding:11px 14px;border-radius:4px;text-decoration:none;direction:rtl;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)">קונספט לדוגמה · עיצוב: altshuler.</a></body>
+</html>
