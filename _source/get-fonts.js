@@ -8,7 +8,7 @@ const urls = new Map();
 const out = blocks.map(([, subset, block]) => {
   const fam = block.match(/font-family: '([^']+)'/)[1];
   const url = block.match(/url\((https:[^)]+)\)/)[1];
-  if (!urls.has(url)) urls.set(url, `${fam.toLowerCase()}-${subset}-${urls.size}.woff2`);
+  if (!urls.has(url)) urls.set(url, `${fam.toLowerCase().replace(/^ibm plex sans hebrew$/, 'ibmplex').replace(/ /g, '-')}-${subset}-${urls.size}.woff2`);
   return block.replace(url, `FONTS/${urls.get(url)}`);
 }).join('\n');
 (async () => {

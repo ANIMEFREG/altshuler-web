@@ -33,6 +33,8 @@ const ICON = {
   plus: '<path d="M12 5v14"/><path d="M5 12h14"/>',
   menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
   x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/>',
+  moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
 };
 const icon = (n, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICON[n]}</svg>`;
 
@@ -60,7 +62,9 @@ function page(L) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(L.title)}</title>
 <meta name="description" content="${esc(L.description)}">
-<meta name="theme-color" content="#F4F1EA">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0D16" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta name="google-site-verification" content="6T6on3ABnXPG_Xr47UX2pxeP_9kdInPiHM5eI0HlFHE">
 <meta property="og:title" content="${esc(L.title)}">
 <meta property="og:description" content="${esc(L.description)}">
@@ -71,9 +75,9 @@ function page(L) {
 <link rel="alternate" hreflang="en" href="${SITE}en/">
 <link rel="alternate" hreflang="x-default" href="${SITE}">
 <link rel="icon" href="${P}favicon.svg" type="image/svg+xml">
-${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${P}fonts/heebo-latin-1.woff2" as="font" type="font/woff2" crossorigin>` : `<link rel="preload" href="${P}fonts/rubik-hebrew-2.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${P}fonts/heebo-hebrew-0.woff2" as="font" type="font/woff2" crossorigin>`}
+${ltr ? `<link rel="preload" href="${P}fonts/heebo-latin-1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${P}fonts/ibmplex-latin-3.woff2" as="font" type="font/woff2" crossorigin>` : `<link rel="preload" href="${P}fonts/heebo-hebrew-0.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${P}fonts/ibmplex-hebrew-2.woff2" as="font" type="font/woff2" crossorigin>`}
 <style>${FONTS.replaceAll('FONTS/', P + 'fonts/')}${CSS}</style>
 </head>
 <body>
@@ -87,6 +91,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
       <a class="nav__lang" href="${L.otherPath}" lang="${L.otherPath.includes('en') ? 'en' : 'he'}" aria-label="${L.otherName}">${L.otherLabel}</a>
       <a class="btn btn--ink nav__cta" href="#contact">${L.navCta}</a>
     </nav>
+    <button class="theme" type="button" aria-label="${ltr ? 'Switch light / dark theme' : 'מעבר בין מצב בהיר לכהה'}">${icon('moon', 'i-moon')}${icon('sun', 'i-sun')}</button>
     <button class="burger" type="button" aria-controls="nav" aria-expanded="false" data-open="${L.menu}" data-close="${L.close}" aria-label="${L.menu}">${icon('menu', 'i-open')}${icon('x', 'i-close')}</button>
   </div>
 </header>

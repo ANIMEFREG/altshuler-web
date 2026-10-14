@@ -344,3 +344,99 @@ html[dir=rtl] .wa { inset-inline-end: auto; left: 22px; }
   .wa { width: 52px; height: 52px; bottom: 16px; left: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .sel::before, .sel__c, .sel__tag { opacity: 1; } }
+
+
+/* ================= ТЕМЫ (15.10.2026): светлая (F) и тёмная (H) — один дизайн, две палитры ================= */
+:root {
+  --bg: #FFFFFF; --paper: #F5F6F8; --ink: #0B1220; --ink-2: #29324A; --muted: #5F6782; --line: #E4E7EE;
+  --accent: #4F46E5; --accent-ink: #FFFFFF; --accent-text: #4F46E5; --accent-hover: #4338CA; --accent-soft: #818CF8; --dim: #9AA2B4;
+  --hdr: rgba(255, 255, 255, .92); --hover: rgba(11, 18, 32, .06); --btn-ink: #0B1220; --btn-ink-text: #FFFFFF;
+  --deep: #0B1220; --deep-2: #111A2E; --deep-line: #1C2438; --deep-ink: #E6E8F0; --deep-muted: #A3ACC4; --deep-sub: #C3C9D9;
+  --ftr: #0B1220; --phone: #0B1220; --tag-bg: #E0E7FF; --tag-ink: #3730A3; --err: #B42318;
+  color-scheme: light;
+  --display: 'Heebo', system-ui, sans-serif; --body: 'IBM Plex Sans Hebrew', 'Heebo', system-ui, sans-serif; --radius: 6px;
+}
+:root[data-theme=dark] {
+  --bg: #0A0D16; --paper: #111627; --ink: #E8EAF2; --ink-2: #C6CADA; --muted: #8890A8; --line: #1F2640;
+  --accent: #6366F1; --accent-ink: #FFFFFF; --accent-text: #A5B4FC; --accent-hover: #4F46E5; --accent-soft: #818CF8; --dim: #5E6684;
+  --hdr: rgba(10, 13, 22, .85); --hover: rgba(255, 255, 255, .06); --btn-ink: #E8EAF2; --btn-ink-text: #0A0D16;
+  --deep: #111627; --deep-2: #151B30; --deep-line: #1F2640; --deep-ink: #E8EAF2; --deep-muted: #9AA1B8; --deep-sub: #C6CADA;
+  --ftr: #070910; --phone: #000000; --tag-bg: #1E1B4B; --tag-ink: #C7D2FE; --err: #FCA5A5;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) {
+  --bg: #0A0D16; --paper: #111627; --ink: #E8EAF2; --ink-2: #C6CADA; --muted: #8890A8; --line: #1F2640;
+  --accent: #6366F1; --accent-ink: #FFFFFF; --accent-text: #A5B4FC; --accent-hover: #4F46E5; --accent-soft: #818CF8; --dim: #5E6684;
+  --hdr: rgba(10, 13, 22, .85); --hover: rgba(255, 255, 255, .06); --btn-ink: #E8EAF2; --btn-ink-text: #0A0D16;
+  --deep: #111627; --deep-2: #151B30; --deep-line: #1F2640; --deep-ink: #E8EAF2; --deep-muted: #9AA1B8; --deep-sub: #C6CADA;
+  --ftr: #070910; --phone: #000000; --tag-bg: #1E1B4B; --tag-ink: #C7D2FE; --err: #FCA5A5;
+  color-scheme: dark;
+  }
+}
+body { transition: background-color .3s, color .3s; }
+.hdr { background: var(--hdr); }
+.nav a:not(.btn):hover { background: var(--hover); }
+.btn, .nav a, .nav__lang, .burger, .theme, .tags li, .note, .eyebrow span, .form input, .form select, .form textarea { border-radius: 4px; }
+.btn--accent { color: var(--accent-ink); }
+.btn--accent:hover { background: var(--accent-hover); }
+.btn--ink, .btn--ink:hover, .nav .nav__cta { background: var(--btn-ink); color: var(--btn-ink-text); }
+.btn--ink:hover { opacity: .88; }
+.btn--line:hover { background: var(--ink); color: var(--bg); }
+.theme { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: none; border: 1.5px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; transition: background-color .2s; }
+.theme:hover { background: var(--hover); }
+.theme .ico { width: 20px; height: 20px; }
+.theme .i-sun { display: none; }
+:root[data-theme=dark] .theme .i-sun { display: block; }
+:root[data-theme=dark] .theme .i-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) .theme .i-sun { display: block; }
+  :root:not([data-theme=light]) .theme .i-moon { display: none; }
+}
+.hdr__in { gap: 12px; }
+.hdr__in .nav { margin-inline-start: auto; }
+
+/* спокойнее и строже: без наклонов, маркера и свечения */
+.hero__media .browser, html[dir=rtl] .hero__media .browser, .hero__media .phone, html[dir=rtl] .hero__media .phone { transform: none; }
+.hero__title { font-weight: 300; letter-spacing: -.02em; }
+html[dir=rtl] .hero__title { letter-spacing: 0; }
+.hero__title em { color: var(--accent-text); }
+.hero__title em::after { display: none; }
+.hero__title .line:last-child { color: var(--dim); }
+.kicker::before { box-shadow: none; }
+.h2, .steps__n, .stats dd, .band span { font-weight: 300; }
+.case__name, .feat h3, .steps h3, summary, .next strong, .concept__info strong, .concepts__title { font-weight: 500; }
+.logo b { color: var(--accent-text); }
+
+.band { background: var(--deep); color: var(--deep-ink); }
+.band i { color: var(--accent-soft); }
+.sec--dark { background: var(--deep); color: var(--deep-ink); }
+.sec--dark .eyebrow { color: var(--deep-muted); }
+.grid3 { background: var(--deep-line); border-color: var(--deep-line); }
+.feat { background: var(--deep); }
+.feat:hover { background: var(--deep-2); }
+.feat .ico { color: var(--accent-soft); }
+.feat p { color: var(--deep-muted); }
+.sec--accent { background: var(--deep); color: var(--deep-ink); }
+.sec--accent .eyebrow { color: var(--deep-muted); }
+.sec--accent .lead { color: var(--deep-sub); }
+.contact__mail a { border-color: var(--accent-soft); }
+.form { box-shadow: none; border: 1px solid var(--deep-line); }
+.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent); }
+.form .err { color: var(--err); }
+.browser { border-radius: 8px; }
+.phone { background: var(--phone); border-radius: 26px; }
+.next { border-style: solid; border-width: 1px; border-color: var(--line); }
+.next:hover { border-color: var(--accent); background: var(--paper); }
+.next__plus { border-radius: 4px; color: #fff; background: var(--accent); }
+.steps li { border-top: 1px solid var(--ink); }
+.steps__n { color: var(--accent-text); }
+.link { border-color: var(--accent); }
+.link:hover { color: var(--accent-text); }
+.concept__tag { background: var(--tag-bg); color: var(--tag-ink); }
+.concept__open { border-color: var(--accent); }
+.ftr { background: var(--ftr); color: #9AA1B8; }
+.ftr .logo { color: #E8EAF2; }
+.ftr a:hover { color: #FFFFFF; }
+:focus-visible { outline-color: var(--accent); }
+@media (max-width: 960px) { .hdr__in .theme { margin-inline-start: auto; } }
