@@ -36,10 +36,12 @@ const ICON = {
 };
 const icon = (n, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICON[n]}</svg>`;
 
+// ?v=хэш файла — браузер подтягивает картинку заново, когда она изменилась
+const imgUrl = (P, file) => `${P}img/${file}?v=${require('crypto').createHash('md5').update(fs.readFileSync(path.join(ROOT, 'img', file))).digest('hex').slice(0, 8)}`;
 function shot(name, widths, alt, sizes, eager, P) {
-  const srcset = widths.map(w => `${P}img/${name}-${w}.webp ${w}w`).join(', ');
+  const srcset = widths.map(w => `${imgUrl(P, `${name}-${w}.webp`)} ${w}w`).join(', ');
   const w = widths[0], h = name.includes('mobile') ? Math.round(w * 844 / 390) : Math.round(w * 900 / 1440);
-  return `<img src="${P}img/${name}-${w}.webp" srcset="${srcset}" sizes="${sizes}" alt="${esc(alt)}" width="${w}" height="${h}"${eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}>`;
+  return `<img src="${imgUrl(P, `${name}-${w}.webp`)}" srcset="${srcset}" sizes="${sizes}" alt="${esc(alt)}" width="${w}" height="${h}"${eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}>`;
 }
 const browser = img => `<div class="browser"><div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></div>${img}</div>`;
 const phone = img => `<div class="phone">${img}</div>`;
