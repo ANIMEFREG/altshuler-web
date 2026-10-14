@@ -73,7 +73,10 @@ function page(L) {
 <link rel="alternate" hreflang="he" href="${SITE}">
 <link rel="alternate" hreflang="en" href="${SITE}en/">
 <link rel="alternate" hreflang="x-default" href="${SITE}">
+<link rel="icon" href="${P}favicon.ico" sizes="any">
 <link rel="icon" href="${P}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${P}apple-touch-icon.png">
+<link rel="manifest" href="${P}site.webmanifest">
 ${ltr ? `<link rel="preload" href="${P}fonts/heebo-latin-1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${P}fonts/ibmplex-latin-3.woff2" as="font" type="font/woff2" crossorigin>` : `<link rel="preload" href="${P}fonts/heebo-hebrew-0.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${P}fonts/ibmplex-hebrew-2.woff2" as="font" type="font/woff2" crossorigin>`}
