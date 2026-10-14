@@ -25,11 +25,7 @@ const io = new IntersectionObserver(entries => entries.forEach(en => {
 }), { rootMargin: '0px 0px -8% 0px' });
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-// кнопка плана сразу выбирает его в форме
 const form = document.getElementById('form');
-document.querySelectorAll('[data-plan]').forEach(a => a.addEventListener('click', () => {
-  form.elements.plan.selectedIndex = +a.dataset.plan;
-}));
 
 // форма: проверка + отправка через Web3Forms (ключ в data-key; заявка приходит на studio@, без перехода в почтовую программу)
 form.addEventListener('submit', async e => {

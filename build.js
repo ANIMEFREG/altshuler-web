@@ -159,31 +159,9 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
   </div>
 </section>
 
-<section class="sec sec--paper" id="plans">
-  <div class="wrap">
-    ${head(plans.eyebrow, plans.title, '04')}
-    <p class="lead lead--sec">${plans.lead}</p>
-    <div class="plans">${plans.items.map(([t, d, price, list, pop], i) => `
-      <div class="plan${pop ? ' plan--pop' : ''}${price ? '' : ' plan--vip'} rv" style="--d:${i * 80}ms">
-        ${pop ? `<span class="plan__badge">${plans.popular}</span>` : price ? '' : `<span class="plan__badge plan__badge--vip">${plans.vipBadge}</span>`}
-        <h3>${t}</h3><p class="plan__d">${d}</p>
-        ${price ? `<p class="price"><small>${plans.from}</small><span dir="ltr">${price}</span><small>${plans.currency}</small></p>
-        <p class="plan__once">${plans.once}</p>` : `<p class="price price--word"><span>${plans.vipPrice}</span></p>
-        <p class="plan__once">${plans.vipOnce}</p>`}
-        <ul>${list.map(x => x.startsWith('+') ? `<li class="plan__plus">${x.slice(1)}</li>` : `<li>${icon('check')}${x}</li>`).join('')}</ul>
-        <a class="btn ${pop ? 'btn--accent' : 'btn--line'}" href="#contact" data-plan="${i + 1}">${price ? plans.cta : plans.vipCta}</a>
-      </div>`).join('')}
-    </div>
-    <div class="care rv">
-      <div><h3>${plans.care.title}</h3><p>${plans.care.text}</p></div>
-      <p class="price price--sm"><small>${plans.from}</small><span dir="ltr">${plans.care.price}</span><small>${plans.currency} ${plans.care.per}</small></p>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="about">
   <div class="wrap about">
-    <p class="eyebrow"><span>05</span>${about.eyebrow}</p>
+    <p class="eyebrow"><span>04</span>${about.eyebrow}</p>
     <div class="about__body rv">
       <h2 class="h2">${about.title}</h2>
       ${about.text.map(p => `<p>${p}</p>`).join('')}
@@ -193,7 +171,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
 
 <section class="sec sec--line" id="faq">
   <div class="wrap faq">
-    <div>${head(faq.eyebrow, faq.title, '06')}</div>
+    <div>${head(faq.eyebrow, faq.title, '05')}</div>
     <div class="faq__list">${faq.items.map(([q, a]) => `<details class="rv"><summary>${q}${icon('plus')}</summary><p>${a}</p></details>`).join('')}</div>
   </div>
 </section>
@@ -201,7 +179,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
 <section class="sec sec--accent" id="contact">
   <div class="wrap contact">
     <div>
-      <p class="eyebrow"><span>07</span>${contact.eyebrow}</p>
+      <p class="eyebrow"><span>06</span>${contact.eyebrow}</p>
       <h2 class="h2 h2--xl">${contact.title}</h2>
       <p class="lead">${contact.lead}</p>
       <p class="contact__mail">${contact.or}<a href="mailto:${C.email}" dir="ltr">${C.email}</a></p>
@@ -211,7 +189,6 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
       <label>${contact.business}<input name="business" autocomplete="organization"></label>
       <label>${contact.phone}<input name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" required></label>
       <label>${contact.emailLabel}<input name="email" type="email" autocomplete="email" dir="ltr" required></label>
-      <label class="full">${contact.plan}<select name="plan">${contact.planOptions.map(o => `<option>${o}</option>`).join('')}</select></label>
       <label class="full">${contact.message}<textarea name="message" rows="4" placeholder="${esc(contact.messagePh)}"></textarea></label>
       <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn--ink full" type="submit">${contact.send}${arrow}</button>

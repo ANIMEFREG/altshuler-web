@@ -13,7 +13,7 @@
     "studio": "בניית אתרים",
     "skip": "דלגו לתוכן",
     "menu": "תפריט", "close": "סגירה",
-    "nav": [["#work", "עבודות"], ["#services", "למה אנחנו"], ["#process", "תהליך"], ["#plans", "מחירים"], ["#faq", "שאלות"]],
+    "nav": [["#work", "עבודות"], ["#services", "למה אנחנו"], ["#process", "תהליך"], ["#faq", "שאלות"]],
     "navCta": "בואו נדבר",
     "hero": {
       "kicker": "עיצוב ובניית אתרים לעסקים",
@@ -123,7 +123,7 @@
     "studio": "Web studio",
     "skip": "Skip to content",
     "menu": "Menu", "close": "Close",
-    "nav": [["#work", "Work"], ["#services", "Why us"], ["#process", "Process"], ["#plans", "Pricing"], ["#faq", "FAQ"]],
+    "nav": [["#work", "Work"], ["#services", "Why us"], ["#process", "Process"], ["#faq", "FAQ"]],
     "navCta": "Let's talk",
     "hero": {
       "kicker": "Website design for businesses",
