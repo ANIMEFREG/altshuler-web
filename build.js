@@ -103,7 +103,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/rubik-latin-3.woff2" as="font" type
     </div>
     <ul class="facts up" style="--d:450ms">${hero.facts.map(f => `<li>${icon('check')}${f}</li>`).join('')}</ul>
     <div class="hero__media up" style="--d:200ms">
-      <div class="sel"><i class="sel__c sel__c--1"></i><i class="sel__c sel__c--2"></i><i class="sel__c sel__c--3"></i><i class="sel__c sel__c--4"></i><span class="sel__tag" dir="ltr">rotisserie — 1440 × 900</span>${browser(shot('roti-desktop', [720, 1440], work.altDesktop, '(max-width: 1100px) 92vw, 1040px', true, P))}</div>
+      ${browser(shot('roti-desktop', [720, 1440], work.altDesktop, '(max-width: 1100px) 92vw, 1040px', true, P))}
       ${phone(shot('roti-mobile', [390], work.altMobile, '200px', true, P))}
     </div>
   </div>
