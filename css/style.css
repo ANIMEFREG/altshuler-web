@@ -364,16 +364,6 @@ html[dir=rtl] .wa { inset-inline-end: auto; left: 22px; }
   --ftr: #070910; --phone: #000000; --tag-bg: #1E1B4B; --tag-ink: #C7D2FE; --err: #FCA5A5;
   color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]) {
-  --bg: #0A0D16; --paper: #111627; --ink: #E8EAF2; --ink-2: #C6CADA; --muted: #8890A8; --line: #1F2640;
-  --accent: #6366F1; --accent-ink: #FFFFFF; --accent-text: #A5B4FC; --accent-hover: #4F46E5; --accent-soft: #818CF8; --dim: #5E6684;
-  --hdr: rgba(10, 13, 22, .85); --hover: rgba(255, 255, 255, .06); --btn-ink: #E8EAF2; --btn-ink-text: #0A0D16;
-  --deep: #111627; --deep-2: #151B30; --deep-line: #1F2640; --deep-ink: #E8EAF2; --deep-muted: #9AA1B8; --deep-sub: #C6CADA;
-  --ftr: #070910; --phone: #000000; --tag-bg: #1E1B4B; --tag-ink: #C7D2FE; --err: #FCA5A5;
-  color-scheme: dark;
-  }
-}
 body { transition: background-color .3s, color .3s; }
 .hdr { background: var(--hdr); }
 .nav a:not(.btn):hover { background: var(--hover); }
@@ -389,10 +379,6 @@ body { transition: background-color .3s, color .3s; }
 .theme .i-sun { display: none; }
 :root[data-theme=dark] .theme .i-sun { display: block; }
 :root[data-theme=dark] .theme .i-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme=light]) .theme .i-sun { display: block; }
-  :root:not([data-theme=light]) .theme .i-moon { display: none; }
-}
 .hdr__in { gap: 12px; }
 .hdr__in .nav { margin-inline-start: auto; }
 

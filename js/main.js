@@ -81,10 +81,10 @@ form.addEventListener('submit', async e => {
 
 document.getElementById('y').textContent = new Date().getFullYear();
 
-// светлая / тёмная тема: первый раз — как в системе, дальше запоминаем выбор
+// светлая / тёмная тема: по умолчанию светлая, выбор посетителя запоминаем
 document.querySelectorAll('.theme').forEach(btn => btn.addEventListener('click', () => {
   const root = document.documentElement;
-  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const dark = root.dataset.theme === 'dark';
   root.dataset.theme = dark ? 'light' : 'dark';
   try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
 }));

@@ -62,8 +62,7 @@ function page(L) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(L.title)}</title>
 <meta name="description" content="${esc(L.description)}">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0A0D16" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF">
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta name="google-site-verification" content="6T6on3ABnXPG_Xr47UX2pxeP_9kdInPiHM5eI0HlFHE">
 <meta property="og:title" content="${esc(L.title)}">
