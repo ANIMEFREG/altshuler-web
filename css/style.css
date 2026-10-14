@@ -440,3 +440,23 @@ html[dir=rtl] .hero__title { letter-spacing: 0; }
 .ftr a:hover { color: #FFFFFF; }
 :focus-visible { outline-color: var(--accent); }
 @media (max-width: 960px) { .hdr__in .theme { margin-inline-start: auto; } }
+
+/* шапка: логотип | разделы | телефон · язык · тема · кнопка */
+@media (min-width: 961px) {
+  .hdr__in .nav { flex: 1; margin-inline-start: 40px; gap: 2px; }
+  .nav .nav__phone { margin-inline-start: auto; padding-inline-end: 18px; border-inline-end: 1px solid var(--line); border-radius: 0; }
+  .nav .nav__phone:hover { background: none; color: var(--accent-text); }
+  .theme--m { display: none; }
+}
+.nav__lang { border: 0; margin-inline: 4px 0; font-weight: 600 !important; font-size: 14.5px !important; color: var(--muted); }
+.nav__lang:hover { color: var(--ink); }
+.theme { border: 0; width: 40px; height: 40px; color: var(--muted); border-radius: 50%; }
+.theme:hover { color: var(--ink); background: var(--hover); }
+.nav .theme { margin-inline-end: 10px; }
+@media (max-width: 960px) {
+  .nav .theme { display: none; }
+  .hdr__in .theme--m { margin-inline-start: auto; }
+}
+@media (min-width: 961px) {
+  html[dir=rtl] .nav .nav__phone { margin-inline-start: 0; margin-right: auto; padding-right: 14px; padding-left: 18px; border-right: 0; border-left: 1px solid var(--line); }
+}

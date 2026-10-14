@@ -89,9 +89,10 @@ ${ltr ? `<link rel="preload" href="${P}fonts/heebo-latin-1.woff2" as="font" type
       ${L.nav.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}
       <a class="nav__phone" href="tel:${C.phone.replace(/-/g, '')}" dir="ltr">${C.phone}</a>
       <a class="nav__lang" href="${L.otherPath}" lang="${L.otherPath.includes('en') ? 'en' : 'he'}" aria-label="${L.otherName}">${L.otherLabel}</a>
+      <button class="theme" type="button" aria-label="${ltr ? 'Switch light / dark theme' : 'מעבר בין מצב בהיר לכהה'}">${icon('moon', 'i-moon')}${icon('sun', 'i-sun')}</button>
       <a class="btn btn--ink nav__cta" href="#contact">${L.navCta}</a>
     </nav>
-    <button class="theme" type="button" aria-label="${ltr ? 'Switch light / dark theme' : 'מעבר בין מצב בהיר לכהה'}">${icon('moon', 'i-moon')}${icon('sun', 'i-sun')}</button>
+    <button class="theme theme--m" type="button" aria-label="${ltr ? 'Switch light / dark theme' : 'מעבר בין מצב בהיר לכהה'}">${icon('moon', 'i-moon')}${icon('sun', 'i-sun')}</button>
     <button class="burger" type="button" aria-controls="nav" aria-expanded="false" data-open="${L.menu}" data-close="${L.close}" aria-label="${L.menu}">${icon('menu', 'i-open')}${icon('x', 'i-close')}</button>
   </div>
 </header>

@@ -82,10 +82,9 @@ form.addEventListener('submit', async e => {
 document.getElementById('y').textContent = new Date().getFullYear();
 
 // светлая / тёмная тема: первый раз — как в системе, дальше запоминаем выбор
-const themeBtn = document.querySelector('.theme');
-if (themeBtn) themeBtn.addEventListener('click', () => {
+document.querySelectorAll('.theme').forEach(btn => btn.addEventListener('click', () => {
   const root = document.documentElement;
   const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
   root.dataset.theme = dark ? 'light' : 'dark';
   try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
-});
+}));
