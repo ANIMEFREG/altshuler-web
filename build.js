@@ -78,6 +78,7 @@ ${ltr ? `<link rel="preload" href="${P}fonts/heebo-latin-1.woff2" as="font" type
 <link rel="preload" href="${P}fonts/ibmplex-latin-3.woff2" as="font" type="font/woff2" crossorigin>` : `<link rel="preload" href="${P}fonts/heebo-hebrew-0.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${P}fonts/ibmplex-hebrew-2.woff2" as="font" type="font/woff2" crossorigin>`}
 <style>${FONTS.replaceAll('FONTS/', P + 'fonts/')}${CSS}</style>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "66b2348cb5484e7c83818f362bb64319"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 <a class="skip" href="#main">${L.skip}</a>
