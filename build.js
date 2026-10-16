@@ -6,7 +6,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 // адрес сайта в интернете (для Google и превью ссылок)
-const SITE = 'https://altshuler.co.il/';
+const SITE = 'https://www.altshuler.co.il/';
 const C = JSON.parse(fs.readFileSync(path.join(ROOT, '_source/content.json'), 'utf8'));
 // стили встраиваются в страницу (меньше запросов → быстрее первая отрисовка); редактировать — css/style.css
 const CSS = fs.readFileSync(path.join(ROOT, 'css/style.css'), 'utf8')
